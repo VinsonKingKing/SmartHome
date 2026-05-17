@@ -482,6 +482,7 @@ void		Delayus(unsigned int	delaytime)		// 1 1ms 2 2ms etc.
 	for(i=0;i<delaytime;i++)
 		{
 			__asm("NOP");
+			__asm("NOP");
 		}
 }	
 ////////////////////////////////////////////
