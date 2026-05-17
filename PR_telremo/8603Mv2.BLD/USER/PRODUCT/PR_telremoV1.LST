@@ -1,0 +1,2641 @@
+Copyright(C) TOSHIBA CORPORATION 1997  All rights reserved
+Sat May 10 09:49:40 2008
+
+TLCS-870/C Relocatable Assembler (32) V1.0b  [Page     1]  PR_telremoV1.lst
+Runtime option : asm870c -g -l -zc -XE -lf PR_telremoV1.lst -GN PR_telremoV1 -O1 -o E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel -$ PR_telremoV1.asm
+
+Location  Object                     Ins   Line Source Statement
+
+                                 +0    1      1 ; TLCS-870/C C Compiler - Driver(32) Version 1.51 
+                                 +0    2      2 ; Option : -$ -f E:\PR_telremo\8603Mv2.BLD\SYSTEM\PROJ\8603Mv2.OPL
+                                 +0    3      3 ; TLCS-870/C C Compiler - Parser (32) Version 1.8r.12.06
+                                 +0    4      4 ; Option: -g -XS4
+                                 +0    5      5 ; TLCS-870/C C Compiler - Code Generator (32) Version 1.8r.a113
+                                 +0    6      6 ; Option: -g -O -XS4 
+                                 +0    7      7 ; TLCS-870/C C Compiler - Package (32) Version 1.10
+                                 +0    8      8 ; Copyright(C) 1997-1999 TOSHIBA CORPORATION  All rights reserved
+                                 +0    9      9 	module PR_telremoV1_c
+                                 +0   10     10 	symbol_a "1.8r",54,411,2
+                                 +0   11     11 	file "E:\PR_telremo\PR_telremoV1.c",0,0,0
+                                 +0   12     12 	symbol_a "_C870C_VERSION",16,0,1
+                                 +0   13     13 	symbol_a "110",16,0,2
+                                 +0   14     14 	file "E:\PR_telremo\IOSFR807.h",0,0,0
+                                 +0   15     15 	symbol_t 65,gu,0,1
+                                 +0   16     16 	symbol_t 66,O,65,1
+                                 +0   17     17 	symbol_t 67,gu,1,1
+                                 +0   18     18 	symbol_t 68,O,67,1
+                                 +0   19     19 	symbol_t 69,gu,2,1
+                                 +0   20     20 	symbol_t 70,O,69,1
+                                 +0   21     21 	symbol_t 71,gu,3,1
+                                 +0   22     22 	symbol_t 72,O,71,1
+                                 +0   23     23 	symbol_t 73,gu,4,1
+                                 +0   24     24 	symbol_t 74,O,73,1
+                                 +0   25     25 	symbol_t 75,gu,5,1
+                                 +0   26     26 	symbol_t 76,O,75,1
+                                 +0   27     27 	symbol_t 77,gu,6,1
+                                 +0   28     28 	symbol_t 78,O,77,1
+                                 +0   29     29 	symbol_t 79,gu,7,1
+                                 +0   30     30 	symbol_t 80,O,79,1
+                                 +0   31     31 	symbol_t 64,S,"byte_format",1,8,"bit7",65,7,"bit6",67,6,"bit5",69,5,"bit4",71,4,"bit3",73,3,"bit2",75,2,"bit1",77,1,"bit0",79,0
+                                 +0   32     32 	symbol_t 81,O,64,1
+                                 +0   33     33 	symbol_t 82,T,"byte_field",64,0
+                                 +0   34     34 	symbol_t 84,O,82,1
+                                 +0   35     35 	symbol_t 83,U,"io_format",1,2,"io_byte",3,0,"io_bit",82,0
+                                 +0   36     36 	symbol_t 85,O,83,1
+                                 +0   37     37 	symbol_t 86,T,"io_field",83,0
+                                 +0   38     38 	symbol_t 87,nv,3,0
+                                 +0   39     39 	symbol_t 88,O,87,1
+                                 +0   40     40 	symbol_t 89,nv,82,0
+                                 +0   41     41 	symbol_t 90,O,89,1
+                                 +0   42     42 	symbol_t 91,nv,65,0
+                                 +0   43     43 	symbol_t 92,O,91,1
+                                 +0   44     44 	symbol_t 93,nv,67,0
+                                 +0   45     45 	symbol_t 94,O,93,1
+                                 +0   46     46 	symbol_t 95,nv,69,0
+                                 +0   47     47 	symbol_t 96,O,95,1
+                                 +0   48     48 	symbol_t 97,nv,71,0
+                                 +0   49     49 	symbol_t 98,O,97,1
+                                 +0   50     50 	symbol_t 99,nv,73,0
+                                 +0   51     51 	symbol_t 100,O,99,1
+                                 +0   52     52 	symbol_t 101,nv,75,0
+                                 +0   53     53 	symbol_t 102,O,101,1
+                                 +0   54     54 	symbol_t 103,nv,77,0
+                                 +0   55     55 	symbol_t 104,O,103,1
+                                 +0   56     56 	symbol_t 105,nv,79,0
+                                 +0   57     57 	symbol_t 106,O,105,1
+                                 +0   58     58 	symbol_t 107,nv,86,0
+                                 +0   59     59 	symbol_t 108,O,107,1
+                                 +0   60     60 	symbol_n "P0DR",107,4,0
+                                 +0   61     61 io_P0DR section data abs=0x0
+                                 +0   62     62 	symbol_a "P0DR",10,1,0
+                                 +0   63     63 	public _P0DR
+00000000                         +0   64     64 _P0DR:
+00000000                         +0   65     65 	dsb 1
+                                 +0   66     66 	symbol_a "OP0",16,1,1
+                                 +0   67     67 	symbol_a "P0DR.io_byte",16,1,2
+                                 +0   68     68 	symbol_a "OP00",16,2,1
+                                 +0   69     69 	symbol_a "P0DR.io_bit.bit0",16,2,2
+                                 +0   70     70 	symbol_a "OP01",16,3,1
+                                 +0   71     71 	symbol_a "P0DR.io_bit.bit1",16,3,2
+                                 +0   72     72 	symbol_a "OP02",16,4,1
+                                 +0   73     73 	symbol_a "P0DR.io_bit.bit2",16,4,2
+                                 +0   74     74 	symbol_a "OP03",16,5,1
+                                 +0   75     75 	symbol_a "P0DR.io_bit.bit3",16,5,2
+                                 +0   76     76 	symbol_a "OP04",16,6,1
+                                 +0   77     77 	symbol_a "P0DR.io_bit.bit4",16,6,2
+                                 +0   78     78 	symbol_a "OP05",16,7,1
+                                 +0   79     79 	symbol_a "P0DR.io_bit.bit5",16,7,2
+                                 +0   80     80 	symbol_a "OP06",16,8,1
+                                 +0   81     81 	symbol_a "P0DR.io_bit.bit6",16,8,2
+                                 +0   82     82 	symbol_a "OP07",16,9,1
+                                 +0   83     83 	symbol_a "P0DR.io_bit.bit7",16,9,2
+                                 +0   84     84 	symbol_t 109,nv,86,0
+                                 +0   85     85 	symbol_t 110,O,109,1
+                                 +0   86     86 	symbol_n "P1DR",109,4,0
+                                 +0   87     87 io_P1DR section data abs=0x1
+                                 +0   88     88 	symbol_a "P1DR",10,1,1
+                                 +0   89     89 	public _P1DR
+00000001                         +0   90     90 _P1DR:
+00000001                         +0   91     91 	dsb 1
+                                 +0   92     92 	symbol_a "OP1",16,10,1
+                                 +0   93     93 	symbol_a "P1DR.io_byte",16,10,2
+                                 +0   94     94 	symbol_a "IP1",16,11,1
+                                 +0   95     95 	symbol_a "P1DR.io_byte",16,11,2
+                                 +0   96     96 	symbol_a "OP10",16,12,1
+                                 +0   97     97 	symbol_a "P1DR.io_bit.bit0",16,12,2
+                                 +0   98     98 	symbol_a "OP11",16,13,1
+                                 +0   99     99 	symbol_a "P1DR.io_bit.bit1",16,13,2
+                                 +0  100    100 	symbol_a "OP12",16,14,1
+                                 +0  101    101 	symbol_a "P1DR.io_bit.bit2",16,14,2
+                                 +0  102    102 	symbol_a "OP13",16,15,1
+                                 +0  103    103 	symbol_a "P1DR.io_bit.bit3",16,15,2
+                                 +0  104    104 	symbol_a "OP14",16,16,1
+                                 +0  105    105 	symbol_a "P1DR.io_bit.bit4",16,16,2
+                                 +0  106    106 	symbol_a "OP15",16,17,1
+                                 +0  107    107 	symbol_a "P1DR.io_bit.bit5",16,17,2
+                                 +0  108    108 	symbol_a "OP16",16,18,1
+                                 +0  109    109 	symbol_a "P1DR.io_bit.bit6",16,18,2
+                                 +0  110    110 	symbol_a "OP17",16,19,1
+                                 +0  111    111 	symbol_a "P1DR.io_bit.bit7",16,19,2
+                                 +0  112    112 	symbol_t 111,nv,86,0
+                                 +0  113    113 	symbol_t 112,O,111,1
+                                 +0  114    114 	symbol_n "P2DR",111,4,0
+                                 +0  115    115 io_P2DR section data abs=0x2
+                                 +0  116    116 	symbol_a "P2DR",10,1,2
+                                 +0  117    117 	public _P2DR
+00000002                         +0  118    118 _P2DR:
+00000002                         +0  119    119 	dsb 1
+                                 +0  120    120 	symbol_a "OP2",16,20,1
+                                 +0  121    121 	symbol_a "P2DR.io_byte",16,20,2
+                                 +0  122    122 	symbol_a "OP20",16,21,1
+                                 +0  123    123 	symbol_a "P2DR.io_bit.bit0",16,21,2
+                                 +0  124    124 	symbol_a "OP21",16,22,1
+                                 +0  125    125 	symbol_a "P2DR.io_bit.bit1",16,22,2
+                                 +0  126    126 	symbol_a "OP22",16,23,1
+                                 +0  127    127 	symbol_a "P2DR.io_bit.bit2",16,23,2
+                                 +0  128    128 	symbol_t 113,nv,86,0
+                                 +0  129    129 	symbol_t 114,O,113,1
+                                 +0  130    130 	symbol_n "P3DR",113,4,0
+                                 +0  131    131 io_P3DR section data abs=0x3
+                                 +0  132    132 	symbol_a "P3DR",10,1,3
+                                 +0  133    133 	public _P3DR
+00000003                         +0  134    134 _P3DR:
+00000003                         +0  135    135 	dsb 1
+                                 +0  136    136 	symbol_a "OP3",16,24,1
+                                 +0  137    137 	symbol_a "P3DR.io_byte",16,24,2
+                                 +0  138    138 	symbol_a "OP30",16,25,1
+                                 +0  139    139 	symbol_a "P3DR.io_bit.bit0",16,25,2
+                                 +0  140    140 	symbol_a "OP31",16,26,1
+                                 +0  141    141 	symbol_a "P3DR.io_bit.bit1",16,26,2
+                                 +0  142    142 	symbol_a "OP32",16,27,1
+                                 +0  143    143 	symbol_a "P3DR.io_bit.bit2",16,27,2
+                                 +0  144    144 	symbol_a "OP33",16,28,1
+                                 +0  145    145 	symbol_a "P3DR.io_bit.bit3",16,28,2
+                                 +0  146    146 	symbol_a "OP34",16,29,1
+                                 +0  147    147 	symbol_a "P3DR.io_bit.bit4",16,29,2
+                                 +0  148    148 	symbol_a "OP35",16,30,1
+                                 +0  149    149 	symbol_a "P3DR.io_bit.bit5",16,30,2
+                                 +0  150    150 	symbol_a "OP36",16,31,1
+                                 +0  151    151 	symbol_a "P3DR.io_bit.bit6",16,31,2
+                                 +0  152    152 	symbol_a "OP37",16,32,1
+                                 +0  153    153 	symbol_a "P3DR.io_bit.bit7",16,32,2
+                                 +0  154    154 	symbol_t 115,nv,86,0
+                                 +0  155    155 	symbol_t 116,O,115,1
+                                 +0  156    156 	symbol_n "P1CR",115,4,0
+                                 +0  157    157 io_P1CR section data abs=0x9
+                                 +0  158    158 	symbol_a "P1CR",10,1,9
+                                 +0  159    159 	public _P1CR
+00000009                         +0  160    160 _P1CR:
+00000009                         +0  161    161 	dsb 1
+                                 +0  162    162 	symbol_a "P1DDR",16,33,1
+                                 +0  163    163 	symbol_a "P1CR.io_byte",16,33,2
+                                 +0  164    164 	symbol_t 117,nv,86,0
+                                 +0  165    165 	symbol_t 118,O,117,1
+                                 +0  166    166 	symbol_n "P3CR",117,4,0
+                                 +0  167    167 io_P3CR section data abs=0xa
+                                 +0  168    168 	symbol_a "P3CR",10,1,10
+                                 +0  169    169 	public _P3CR
+0000000A                         +0  170    170 _P3CR:
+0000000A                         +0  171    171 	dsb 1
+                                 +0  172    172 	symbol_a "P3DDR",16,34,1
+                                 +0  173    173 	symbol_a "P3CR.io_byte",16,34,2
+                                 +0  174    174 	symbol_a "P3DDR0",16,35,1
+                                 +0  175    175 	symbol_a "P3CR.io_bit.bit0",16,35,2
+                                 +0  176    176 	symbol_a "P3DDR1",16,36,1
+                                 +0  177    177 	symbol_a "P3CR.io_bit.bit1",16,36,2
+                                 +0  178    178 	symbol_a "P3DDR2",16,37,1
+                                 +0  179    179 	symbol_a "P3CR.io_bit.bit2",16,37,2
+                                 +0  180    180 	symbol_a "P3DDR3",16,38,1
+                                 +0  181    181 	symbol_a "P3CR.io_bit.bit3",16,38,2
+                                 +0  182    182 	symbol_a "P3DDR4",16,39,1
+                                 +0  183    183 	symbol_a "P3CR.io_bit.bit4",16,39,2
+                                 +0  184    184 	symbol_a "P3DDR5",16,40,1
+                                 +0  185    185 	symbol_a "P3CR.io_bit.bit5",16,40,2
+                                 +0  186    186 	symbol_a "P3DDR6",16,41,1
+                                 +0  187    187 	symbol_a "P3CR.io_bit.bit6",16,41,2
+                                 +0  188    188 	symbol_a "P3DDR7",16,42,1
+                                 +0  189    189 	symbol_a "P3CR.io_bit.bit7",16,42,2
+                                 +0  190    190 	symbol_t 119,nv,86,0
+                                 +0  191    191 	symbol_t 120,O,119,1
+                                 +0  192    192 	symbol_n "P0OUTCR",119,4,0
+                                 +0  193    193 io_P0OUTCR section data abs=0xb
+                                 +0  194    194 	symbol_a "P0OUTCR",10,1,11
+                                 +0  195    195 	public _P0OUTCR
+0000000B                         +0  196    196 _P0OUTCR:
+0000000B                         +0  197    197 	dsb 1
+                                 +0  198    198 	symbol_a "P0DDR",16,43,1
+                                 +0  199    199 	symbol_a "P0OUTCR.io_byte",16,43,2
+                                 +0  200    200 	symbol_a "P0DDR0",16,44,1
+                                 +0  201    201 	symbol_a "P0OUTCR.io_bit.bit0",16,44,2
+                                 +0  202    202 	symbol_a "P0DDR1",16,45,1
+                                 +0  203    203 	symbol_a "P0OUTCR.io_bit.bit1",16,45,2
+                                 +0  204    204 	symbol_a "P0DDR2",16,46,1
+                                 +0  205    205 	symbol_a "P0OUTCR.io_bit.bit2",16,46,2
+                                 +0  206    206 	symbol_a "P0DDR3",16,47,1
+                                 +0  207    207 	symbol_a "P0OUTCR.io_bit.bit3",16,47,2
+                                 +0  208    208 	symbol_a "P0DDR4",16,48,1
+                                 +0  209    209 	symbol_a "P0OUTCR.io_bit.bit4",16,48,2
+                                 +0  210    210 	symbol_a "P0DDR5",16,49,1
+                                 +0  211    211 	symbol_a "P0OUTCR.io_bit.bit5",16,49,2
+                                 +0  212    212 	symbol_a "P0DDR6",16,50,1
+                                 +0  213    213 	symbol_a "P0OUTCR.io_bit.bit6",16,50,2
+                                 +0  214    214 	symbol_a "P0DDR7",16,51,1
+                                 +0  215    215 	symbol_a "P0OUTCR.io_bit.bit7",16,51,2
+                                 +0  216    216 	symbol_t 121,nv,86,0
+                                 +0  217    217 	symbol_t 122,O,121,1
+                                 +0  218    218 	symbol_n "P0PRD",121,4,0
+                                 +0  219    219 io_P0PRD section data abs=0xc
+                                 +0  220    220 	symbol_a "P0PRD",10,1,12
+                                 +0  221    221 	public _P0PRD
+0000000C                         +0  222    222 _P0PRD:
+0000000C                         +0  223    223 	dsb 1
+                                 +0  224    224 	symbol_a "IP0",16,52,1
+                                 +0  225    225 	symbol_a "P0PRD.io_byte",16,52,2
+                                 +0  226    226 	symbol_a "IP00",16,53,1
+                                 +0  227    227 	symbol_a "P0PRD.io_bit.bit0",16,53,2
+                                 +0  228    228 	symbol_a "IP01",16,54,1
+                                 +0  229    229 	symbol_a "P0PRD.io_bit.bit1",16,54,2
+                                 +0  230    230 	symbol_a "IP02",16,55,1
+                                 +0  231    231 	symbol_a "P0PRD.io_bit.bit2",16,55,2
+                                 +0  232    232 	symbol_a "IP03",16,56,1
+                                 +0  233    233 	symbol_a "P0PRD.io_bit.bit3",16,56,2
+                                 +0  234    234 	symbol_a "IP04",16,57,1
+                                 +0  235    235 	symbol_a "P0PRD.io_bit.bit4",16,57,2
+                                 +0  236    236 	symbol_a "IP05",16,58,1
+                                 +0  237    237 	symbol_a "P0PRD.io_bit.bit5",16,58,2
+                                 +0  238    238 	symbol_a "IP06",16,59,1
+                                 +0  239    239 	symbol_a "P0PRD.io_bit.bit6",16,59,2
+                                 +0  240    240 	symbol_a "IP07",16,60,1
+                                 +0  241    241 	symbol_a "P0PRD.io_bit.bit7",16,60,2
+                                 +0  242    242 	symbol_t 123,nv,86,0
+                                 +0  243    243 	symbol_t 124,O,123,1
+                                 +0  244    244 	symbol_n "P2PRD",123,4,0
+                                 +0  245    245 io_P2PRD section data abs=0xd
+                                 +0  246    246 	symbol_a "P2PRD",10,1,13
+                                 +0  247    247 	public _P2PRD
+0000000D                         +0  248    248 _P2PRD:
+0000000D                         +0  249    249 	dsb 1
+                                 +0  250    250 	symbol_a "IP2",16,61,1
+                                 +0  251    251 	symbol_a "P2PRD.io_byte",16,61,2
+                                 +0  252    252 	symbol_a "IP20",16,62,1
+                                 +0  253    253 	symbol_a "P2PRD.io_bit.bit0",16,62,2
+                                 +0  254    254 	symbol_a "IP21",16,63,1
+                                 +0  255    255 	symbol_a "P2PRD.io_bit.bit1",16,63,2
+                                 +0  256    256 	symbol_a "IP22",16,64,1
+                                 +0  257    257 	symbol_a "P2PRD.io_bit.bit2",16,64,2
+                                 +0  258    258 	symbol_t 125,nv,3,0
+                                 +0  259    259 	symbol_t 126,O,125,1
+                                 +0  260    260 	symbol_n "ADCCR1",125,4,0
+                                 +0  261    261 io_ADCCR1 section data abs=0xe
+                                 +0  262    262 	symbol_a "ADCCR1",10,1,14
+                                 +0  263    263 	public _ADCCR1
+0000000E                         +0  264    264 _ADCCR1:
+0000000E                         +0  265    265 	dsb 1
+                                 +0  266    266 	symbol_t 127,nv,3,0
+                                 +0  267    267 	symbol_t 128,O,127,1
+                                 +0  268    268 	symbol_n "ADCCR2",127,4,0
+                                 +0  269    269 io_ADCCR2 section data abs=0xf
+                                 +0  270    270 	symbol_a "ADCCR2",10,1,15
+                                 +0  271    271 	public _ADCCR2
+0000000F                         +0  272    272 _ADCCR2:
+0000000F                         +0  273    273 	dsb 1
+                                 +0  274    274 	symbol_t 129,nv,7,0
+                                 +0  275    275 	symbol_t 130,O,129,1
+                                 +0  276    276 	symbol_n "TC1DRA",129,4,0
+                                 +0  277    277 io_TC1DRA section data abs=0x10
+                                 +0  278    278 	symbol_a "TC1DRA",10,1,16
+                                 +0  279    279 	public _TC1DRA
+00000010                         +0  280    280 _TC1DRA:
+00000010                         +0  281    281 	dsb 2
+                                 +0  282    282 	symbol_t 131,nv,7,0
+                                 +0  283    283 	symbol_t 132,O,131,1
+                                 +0  284    284 	symbol_n "TC1DRB",131,4,0
+                                 +0  285    285 io_TC1DRB section data abs=0x12
+                                 +0  286    286 	symbol_a "TC1DRB",10,1,18
+                                 +0  287    287 	public _TC1DRB
+00000012                         +0  288    288 _TC1DRB:
+00000012                         +0  289    289 	dsb 2
+                                 +0  290    290 	symbol_t 133,nv,3,0
+                                 +0  291    291 	symbol_t 134,O,133,1
+                                 +0  292    292 	symbol_n "TC1CR",133,4,0
+                                 +0  293    293 io_TC1CR section data abs=0x14
+                                 +0  294    294 	symbol_a "TC1CR",10,1,20
+                                 +0  295    295 	public _TC1CR
+00000014                         +0  296    296 _TC1CR:
+00000014                         +0  297    297 	dsb 1
+                                 +0  298    298 	symbol_t 135,nv,3,0
+                                 +0  299    299 	symbol_t 136,O,135,1
+                                 +0  300    300 	symbol_n "TC3CR",135,4,0
+                                 +0  301    301 io_TC3CR section data abs=0x1a
+                                 +0  302    302 	symbol_a "TC3CR",10,1,26
+                                 +0  303    303 	public _TC3CR
+0000001A                         +0  304    304 _TC3CR:
+0000001A                         +0  305    305 	dsb 1
+                                 +0  306    306 	symbol_t 137,nv,3,0
+                                 +0  307    307 	symbol_t 138,O,137,1
+                                 +0  308    308 	symbol_n "TC4CR",137,4,0
+                                 +0  309    309 io_TC4CR section data abs=0x1b
+                                 +0  310    310 	symbol_a "TC4CR",10,1,27
+                                 +0  311    311 	public _TC4CR
+0000001B                         +0  312    312 _TC4CR:
+0000001B                         +0  313    313 	dsb 1
+                                 +0  314    314 	symbol_t 139,nv,3,0
+                                 +0  315    315 	symbol_t 140,O,139,1
+                                 +0  316    316 	symbol_n "TTREG3",139,4,0
+                                 +0  317    317 io_TTREG3 section data abs=0x1c
+                                 +0  318    318 	symbol_a "TTREG3",10,1,28
+                                 +0  319    319 	public _TTREG3
+0000001C                         +0  320    320 _TTREG3:
+0000001C                         +0  321    321 	dsb 1
+                                 +0  322    322 	symbol_t 141,nv,3,0
+                                 +0  323    323 	symbol_t 142,O,141,1
+                                 +0  324    324 	symbol_n "TTREG4",141,4,0
+                                 +0  325    325 io_TTREG4 section data abs=0x1d
+                                 +0  326    326 	symbol_a "TTREG4",10,1,29
+                                 +0  327    327 	public _TTREG4
+0000001D                         +0  328    328 _TTREG4:
+0000001D                         +0  329    329 	dsb 1
+                                 +0  330    330 	symbol_t 143,nv,3,0
+                                 +0  331    331 	symbol_t 144,O,143,1
+                                 +0  332    332 	symbol_n "PWREG3",143,4,0
+                                 +0  333    333 io_PWREG3 section data abs=0x1e
+                                 +0  334    334 	symbol_a "PWREG3",10,1,30
+                                 +0  335    335 	public _PWREG3
+0000001E                         +0  336    336 _PWREG3:
+0000001E                         +0  337    337 	dsb 1
+                                 +0  338    338 	symbol_t 145,nv,3,0
+                                 +0  339    339 	symbol_t 146,O,145,1
+                                 +0  340    340 	symbol_n "PWREG4",145,4,0
+                                 +0  341    341 io_PWREG4 section data abs=0x1f
+                                 +0  342    342 	symbol_a "PWREG4",10,1,31
+                                 +0  343    343 	public _PWREG4
+0000001F                         +0  344    344 _PWREG4:
+0000001F                         +0  345    345 	dsb 1
+                                 +0  346    346 	symbol_t 147,nv,3,0
+                                 +0  347    347 	symbol_t 148,O,147,1
+                                 +0  348    348 	symbol_n "ADCDR1",147,4,0
+                                 +0  349    349 io_ADCDR1 section data abs=0x20
+                                 +0  350    350 	symbol_a "ADCDR1",10,1,32
+                                 +0  351    351 	public _ADCDR1
+00000020                         +0  352    352 _ADCDR1:
+00000020                         +0  353    353 	dsb 1
+                                 +0  354    354 	symbol_t 149,nv,3,0
+                                 +0  355    355 	symbol_t 150,O,149,1
+                                 +0  356    356 	symbol_n "ADCDR2",149,4,0
+                                 +0  357    357 io_ADCDR2 section data abs=0x21
+                                 +0  358    358 	symbol_a "ADCDR2",10,1,33
+                                 +0  359    359 	public _ADCDR2
+00000021                         +0  360    360 _ADCDR2:
+00000021                         +0  361    361 	dsb 1
+                                 +0  362    362 	symbol_t 151,nv,3,0
+                                 +0  363    363 	symbol_t 152,O,151,1
+                                 +0  364    364 	symbol_n "UARTCR1",151,4,0
+                                 +0  365    365 io_UARTCR1 section data abs=0x25
+                                 +0  366    366 	symbol_a "UARTCR1",10,1,37
+                                 +0  367    367 	public _UARTCR1
+00000025                         +0  368    368 _UARTCR1:
+00000025                         +0  369    369 	dsb 1
+                                 +0  370    370 	symbol_t 153,nv,3,0
+                                 +0  371    371 	symbol_t 154,O,153,1
+                                 +0  372    372 	symbol_n "UARTCR2",153,4,0
+                                 +0  373    373 io_UARTCR2 section data abs=0x26
+                                 +0  374    374 	symbol_a "UARTCR2",10,1,38
+                                 +0  375    375 	public _UARTCR2
+00000026                         +0  376    376 _UARTCR2:
+00000026                         +0  377    377 	dsb 1
+                                 +0  378    378 	symbol_t 155,nv,3,0
+                                 +0  379    379 	symbol_t 156,O,155,1
+                                 +0  380    380 	symbol_n "RDBUF",155,4,0
+                                 +0  381    381 io_RDBUF section data abs=0x27
+                                 +0  382    382 	symbol_a "RDBUF",10,1,39
+                                 +0  383    383 	public _RDBUF
+00000027                         +0  384    384 _RDBUF:
+00000027                         +0  385    385 	dsb 1
+                                 +0  386    386 	symbol_t 157,nv,3,0
+                                 +0  387    387 	symbol_t 158,O,157,1
+                                 +0  388    388 	symbol_n "SESR",157,4,0
+                                 +0  389    389 io_SESR section data abs=0x28
+                                 +0  390    390 	symbol_a "SESR",10,1,40
+                                 +0  391    391 	public _SESR
+00000028                         +0  392    392 _SESR:
+00000028                         +0  393    393 	dsb 1
+                                 +0  394    394 	symbol_t 159,nv,3,0
+                                 +0  395    395 	symbol_t 160,O,159,1
+                                 +0  396    396 	symbol_n "SEDR",159,4,0
+                                 +0  397    397 io_SEDR section data abs=0x29
+                                 +0  398    398 	symbol_a "SEDR",10,1,41
+                                 +0  399    399 	public _SEDR
+00000029                         +0  400    400 _SEDR:
+00000029                         +0  401    401 	dsb 1
+                                 +0  402    402 	symbol_t 161,nv,3,0
+                                 +0  403    403 	symbol_t 162,O,161,1
+                                 +0  404    404 	symbol_n "SECR",161,4,0
+                                 +0  405    405 io_SECR section data abs=0x2a
+                                 +0  406    406 	symbol_a "SECR",10,1,42
+                                 +0  407    407 	public _SECR
+0000002A                         +0  408    408 _SECR:
+0000002A                         +0  409    409 	dsb 1
+                                 +0  410    410 	symbol_t 163,nv,3,0
+                                 +0  411    411 	symbol_t 164,O,163,1
+                                 +0  412    412 	symbol_n "STOPCR",163,4,0
+                                 +0  413    413 io_STOPCR section data abs=0x31
+                                 +0  414    414 	symbol_a "STOPCR",10,1,49
+                                 +0  415    415 	public _STOPCR
+00000031                         +0  416    416 _STOPCR:
+00000031                         +0  417    417 	dsb 1
+                                 +0  418    418 	symbol_t 165,nv,3,0
+                                 +0  419    419 	symbol_t 166,O,165,1
+                                 +0  420    420 	symbol_n "WDTCR1",165,4,0
+                                 +0  421    421 io_WDTCR1 section data abs=0x34
+                                 +0  422    422 	symbol_a "WDTCR1",10,1,52
+                                 +0  423    423 	public _WDTCR1
+00000034                         +0  424    424 _WDTCR1:
+00000034                         +0  425    425 	dsb 1
+                                 +0  426    426 	symbol_t 167,nv,3,0
+                                 +0  427    427 	symbol_t 168,O,167,1
+                                 +0  428    428 	symbol_n "WDTCR2",167,4,0
+                                 +0  429    429 io_WDTCR2 section data abs=0x35
+                                 +0  430    430 	symbol_a "WDTCR2",10,1,53
+                                 +0  431    431 	public _WDTCR2
+00000035                         +0  432    432 _WDTCR2:
+00000035                         +0  433    433 	dsb 1
+                                 +0  434    434 	symbol_t 169,nv,3,0
+                                 +0  435    435 	symbol_t 170,O,169,1
+                                 +0  436    436 	symbol_n "TBTCR",169,4,0
+                                 +0  437    437 io_TBTCR section data abs=0x36
+                                 +0  438    438 	symbol_a "TBTCR",10,1,54
+                                 +0  439    439 	public _TBTCR
+00000036                         +0  440    440 _TBTCR:
+00000036                         +0  441    441 	dsb 1
+                                 +0  442    442 	symbol_t 171,nv,3,0
+                                 +0  443    443 	symbol_t 172,O,171,1
+                                 +0  444    444 	symbol_n "EINTCR",171,4,0
+                                 +0  445    445 io_EINTCR section data abs=0x37
+                                 +0  446    446 	symbol_a "EINTCR",10,1,55
+                                 +0  447    447 	public _EINTCR
+00000037                         +0  448    448 _EINTCR:
+00000037                         +0  449    449 	dsb 1
+                                 +0  450    450 	symbol_t 173,nv,3,0
+                                 +0  451    451 	symbol_t 174,O,173,1
+                                 +0  452    452 	symbol_n "SYSCR1",173,4,0
+                                 +0  453    453 io_SYSCR1 section data abs=0x38
+                                 +0  454    454 	symbol_a "SYSCR1",10,1,56
+                                 +0  455    455 	public _SYSCR1
+00000038                         +0  456    456 _SYSCR1:
+00000038                         +0  457    457 	dsb 1
+                                 +0  458    458 	symbol_t 175,nv,3,0
+                                 +0  459    459 	symbol_t 176,O,175,1
+                                 +0  460    460 	symbol_n "SYSCR2",175,4,0
+                                 +0  461    461 io_SYSCR2 section data abs=0x39
+                                 +0  462    462 	symbol_a "SYSCR2",10,1,57
+                                 +0  463    463 	public _SYSCR2
+00000039                         +0  464    464 _SYSCR2:
+00000039                         +0  465    465 	dsb 1
+                                 +0  466    466 	symbol_t 177,nv,86,0
+                                 +0  467    467 	symbol_t 178,O,177,1
+                                 +0  468    468 	symbol_n "EIRL",177,4,0
+                                 +0  469    469 io_EIRL section data abs=0x3a
+                                 +0  470    470 	symbol_a "EIRL",10,1,58
+                                 +0  471    471 	public _EIRL
+0000003A                         +0  472    472 _EIRL:
+0000003A                         +0  473    473 	dsb 1
+                                 +0  474    474 	symbol_a "EIRLA",16,65,1
+                                 +0  475    475 	symbol_a "EIRL.io_byte",16,65,2
+                                 +0  476    476 	symbol_a "EIRL0",16,66,1
+                                 +0  477    477 	symbol_a "EIRL.io_bit.bit0",16,66,2
+                                 +0  478    478 	symbol_a "EIRL1",16,67,1
+                                 +0  479    479 	symbol_a "EIRL.io_bit.bit1",16,67,2
+                                 +0  480    480 	symbol_a "EIRL2",16,68,1
+                                 +0  481    481 	symbol_a "EIRL.io_bit.bit2",16,68,2
+                                 +0  482    482 	symbol_a "EIRL3",16,69,1
+                                 +0  483    483 	symbol_a "EIRL.io_bit.bit3",16,69,2
+                                 +0  484    484 	symbol_a "EIRL4",16,70,1
+                                 +0  485    485 	symbol_a "EIRL.io_bit.bit4",16,70,2
+                                 +0  486    486 	symbol_a "EIRL5",16,71,1
+                                 +0  487    487 	symbol_a "EIRL.io_bit.bit5",16,71,2
+                                 +0  488    488 	symbol_a "EIRL6",16,72,1
+                                 +0  489    489 	symbol_a "EIRL.io_bit.bit6",16,72,2
+                                 +0  490    490 	symbol_a "EIRL7",16,73,1
+                                 +0  491    491 	symbol_a "EIRL.io_bit.bit7",16,73,2
+                                 +0  492    492 	symbol_t 179,nv,86,0
+                                 +0  493    493 	symbol_t 180,O,179,1
+                                 +0  494    494 	symbol_n "EIRH",179,4,0
+                                 +0  495    495 io_EIRH section data abs=0x3b
+                                 +0  496    496 	symbol_a "EIRH",10,1,59
+                                 +0  497    497 	public _EIRH
+0000003B                         +0  498    498 _EIRH:
+0000003B                         +0  499    499 	dsb 1
+                                 +0  500    500 	symbol_a "EIRHA",16,74,1
+                                 +0  501    501 	symbol_a "EIRH.io_byte",16,74,2
+                                 +0  502    502 	symbol_a "EIRH0",16,75,1
+                                 +0  503    503 	symbol_a "EIRH.io_bit.bit0",16,75,2
+                                 +0  504    504 	symbol_a "EIRH1",16,76,1
+                                 +0  505    505 	symbol_a "EIRH.io_bit.bit1",16,76,2
+                                 +0  506    506 	symbol_a "EIRH2",16,77,1
+                                 +0  507    507 	symbol_a "EIRH.io_bit.bit2",16,77,2
+                                 +0  508    508 	symbol_a "EIRH3",16,78,1
+                                 +0  509    509 	symbol_a "EIRH.io_bit.bit3",16,78,2
+                                 +0  510    510 	symbol_a "EIRH4",16,79,1
+                                 +0  511    511 	symbol_a "EIRH.io_bit.bit4",16,79,2
+                                 +0  512    512 	symbol_a "EIRH5",16,80,1
+                                 +0  513    513 	symbol_a "EIRH.io_bit.bit5",16,80,2
+                                 +0  514    514 	symbol_a "EIRH6",16,81,1
+                                 +0  515    515 	symbol_a "EIRH.io_bit.bit6",16,81,2
+                                 +0  516    516 	symbol_a "EIRH7",16,82,1
+                                 +0  517    517 	symbol_a "EIRH.io_bit.bit7",16,82,2
+                                 +0  518    518 	symbol_t 181,nv,3,0
+                                 +0  519    519 	symbol_t 182,O,181,1
+                                 +0  520    520 	symbol_n "ILL",181,4,0
+                                 +0  521    521 io_ILL section data abs=0x3c
+                                 +0  522    522 	symbol_a "ILL",10,1,60
+                                 +0  523    523 	public _ILL
+0000003C                         +0  524    524 _ILL:
+0000003C                         +0  525    525 	dsb 1
+                                 +0  526    526 	symbol_t 183,nv,3,0
+                                 +0  527    527 	symbol_t 184,O,183,1
+                                 +0  528    528 	symbol_n "ILH",183,4,0
+                                 +0  529    529 io_ILH section data abs=0x3d
+                                 +0  530    530 	symbol_a "ILH",10,1,61
+                                 +0  531    531 	public _ILH
+0000003D                         +0  532    532 _ILH:
+0000003D                         +0  533    533 	dsb 1
+                                 +0  534    534 	symbol_t 185,nv,3,0
+                                 +0  535    535 	symbol_t 186,O,185,1
+                                 +0  536    536 	symbol_n "INTSEL",185,4,0
+                                 +0  537    537 io_INTSEL section data abs=0x3e
+                                 +0  538    538 	symbol_a "INTSEL",10,1,62
+                                 +0  539    539 	public _INTSEL
+0000003E                         +0  540    540 _INTSEL:
+0000003E                         +0  541    541 	dsb 1
+                                 +0  542    542 	file "E:\PR_telremo\PR_telremoV1.c",0,0,0
+                                 +0  543    543 	file "E:\PR_telremo\RAM807.h",0,0,0
+                                 +0  544    544 	symbol_t 187,S,"ram_bit_format",1,8,"bit7",65,7,"bit6",67,6,"bit5",69,5,"bit4",71,4,"bit3",73,3,"bit2",75,2,"bit1",77,1,"bit0",79,0
+                                 +0  545    545 	symbol_t 188,O,187,1
+                                 +0  546    546 	symbol_t 189,T,"ram_byte_field",187,0
+                                 +0  547    547 	symbol_t 191,O,189,1
+                                 +0  548    548 	symbol_t 190,U,"ram_format",1,2,"ram_byte",3,0,"ram_bit",189,0
+                                 +0  549    549 	symbol_t 192,O,190,1
+                                 +0  550    550 	symbol_t 193,T,"ram_field",190,0
+                                 +0  551    551 	symbol_n "FLAG0",193,4,0
+                                 +0  552    552 	symbol_n "FLAG1",193,4,0
+                                 +0  553    553 	symbol_n "FLAG2",193,4,0
+                                 +0  554    554 	symbol_n "FLAG3",193,4,0
+                                 +0  555    555 	symbol_n "FLAG4",193,4,0
+                                 +0  556    556 	symbol_n "FLAG5",193,4,0
+                                 +0  557    557 	symbol_n "FLAG6",193,4,0
+                                 +0  558    558 	symbol_n "ERROCODE",193,4,0
+                                 +0  559    559 	symbol_n "FLAGX",193,4,0
+                                 +0  560    560 	symbol_n "FLAGY",193,4,0
+                                 +0  561    561 	symbol_n "FLAGI",193,4,0
+                                 +0  562    562 	symbol_a "FLAG00",16,83,1
+                                 +0  563    563 	symbol_a "FLAG0.ram_bit.bit0",16,83,2
+                                 +0  564    564 	symbol_a "FLAG01",16,84,1
+                                 +0  565    565 	symbol_a "FLAG0.ram_bit.bit1",16,84,2
+                                 +0  566    566 	symbol_a "FLAG02",16,85,1
+                                 +0  567    567 	symbol_a "FLAG0.ram_bit.bit2",16,85,2
+                                 +0  568    568 	symbol_a "FLAG03",16,86,1
+                                 +0  569    569 	symbol_a "FLAG0.ram_bit.bit3",16,86,2
+                                 +0  570    570 	symbol_a "FLAG04",16,87,1
+                                 +0  571    571 	symbol_a "FLAG0.ram_bit.bit4",16,87,2
+                                 +0  572    572 	symbol_a "FLAG05",16,88,1
+                                 +0  573    573 	symbol_a "FLAG0.ram_bit.bit5",16,88,2
+                                 +0  574    574 	symbol_a "FLAG06",16,89,1
+                                 +0  575    575 	symbol_a "FLAG0.ram_bit.bit6",16,89,2
+                                 +0  576    576 	symbol_a "FLAG07",16,90,1
+                                 +0  577    577 	symbol_a "FLAG0.ram_bit.bit7",16,90,2
+                                 +0  578    578 	symbol_a "FLAG10",16,91,1
+                                 +0  579    579 	symbol_a "FLAG1.ram_bit.bit0",16,91,2
+                                 +0  580    580 	symbol_a "FLAG11",16,92,1
+                                 +0  581    581 	symbol_a "FLAG1.ram_bit.bit1",16,92,2
+                                 +0  582    582 	symbol_a "FLAG12",16,93,1
+                                 +0  583    583 	symbol_a "FLAG1.ram_bit.bit2",16,93,2
+                                 +0  584    584 	symbol_a "FLAG13",16,94,1
+                                 +0  585    585 	symbol_a "FLAG1.ram_bit.bit3",16,94,2
+                                 +0  586    586 	symbol_a "FLAG14",16,95,1
+                                 +0  587    587 	symbol_a "FLAG1.ram_bit.bit4",16,95,2
+                                 +0  588    588 	symbol_a "FLAG15",16,96,1
+                                 +0  589    589 	symbol_a "FLAG1.ram_bit.bit5",16,96,2
+                                 +0  590    590 	symbol_a "FLAG16",16,97,1
+                                 +0  591    591 	symbol_a "FLAG1.ram_bit.bit6",16,97,2
+                                 +0  592    592 	symbol_a "FLAG17",16,98,1
+                                 +0  593    593 	symbol_a "FLAG1.ram_bit.bit7",16,98,2
+                                 +0  594    594 	symbol_a "FLAG2A",16,99,1
+                                 +0  595    595 	symbol_a "FLAG2.ram_byte",16,99,2
+                                 +0  596    596 	symbol_a "FLAG20",16,100,1
+                                 +0  597    597 	symbol_a "FLAG2.ram_bit.bit0",16,100,2
+                                 +0  598    598 	symbol_a "FLAG21",16,101,1
+                                 +0  599    599 	symbol_a "FLAG2.ram_bit.bit1",16,101,2
+                                 +0  600    600 	symbol_a "FLAG22",16,102,1
+                                 +0  601    601 	symbol_a "FLAG2.ram_bit.bit2",16,102,2
+                                 +0  602    602 	symbol_a "FLAG23",16,103,1
+                                 +0  603    603 	symbol_a "FLAG2.ram_bit.bit3",16,103,2
+                                 +0  604    604 	symbol_a "FLAG24",16,104,1
+                                 +0  605    605 	symbol_a "FLAG2.ram_bit.bit4",16,104,2
+                                 +0  606    606 	symbol_a "FLAG25",16,105,1
+                                 +0  607    607 	symbol_a "FLAG2.ram_bit.bit5",16,105,2
+                                 +0  608    608 	symbol_a "FLAG26",16,106,1
+                                 +0  609    609 	symbol_a "FLAG2.ram_bit.bit6",16,106,2
+                                 +0  610    610 	symbol_a "FLAG27",16,107,1
+                                 +0  611    611 	symbol_a "FLAG2.ram_bit.bit7",16,107,2
+                                 +0  612    612 	symbol_a "FLAG3A",16,108,1
+                                 +0  613    613 	symbol_a "FLAG3.ram_byte",16,108,2
+                                 +0  614    614 	symbol_a "FLAG30",16,109,1
+                                 +0  615    615 	symbol_a "FLAG3.ram_bit.bit0",16,109,2
+                                 +0  616    616 	symbol_a "FLAG31",16,110,1
+                                 +0  617    617 	symbol_a "FLAG3.ram_bit.bit1",16,110,2
+                                 +0  618    618 	symbol_a "FLAG32",16,111,1
+                                 +0  619    619 	symbol_a "FLAG3.ram_bit.bit2",16,111,2
+                                 +0  620    620 	symbol_a "FLAG33",16,112,1
+                                 +0  621    621 	symbol_a "FLAG3.ram_bit.bit3",16,112,2
+                                 +0  622    622 	symbol_a "FLAG34",16,113,1
+                                 +0  623    623 	symbol_a "FLAG3.ram_bit.bit4",16,113,2
+                                 +0  624    624 	symbol_a "FLAG35",16,114,1
+                                 +0  625    625 	symbol_a "FLAG3.ram_bit.bit5",16,114,2
+                                 +0  626    626 	symbol_a "FLAG36",16,115,1
+                                 +0  627    627 	symbol_a "FLAG3.ram_bit.bit6",16,115,2
+                                 +0  628    628 	symbol_a "FLAG37",16,116,1
+                                 +0  629    629 	symbol_a "FLAG3.ram_bit.bit7",16,116,2
+                                 +0  630    630 	symbol_a "FLAG4A",16,117,1
+                                 +0  631    631 	symbol_a "FLAG4.ram_byte",16,117,2
+                                 +0  632    632 	symbol_a "FLAG40",16,118,1
+                                 +0  633    633 	symbol_a "FLAG4.ram_bit.bit0",16,118,2
+                                 +0  634    634 	symbol_a "FLAG41",16,119,1
+                                 +0  635    635 	symbol_a "FLAG4.ram_bit.bit1",16,119,2
+                                 +0  636    636 	symbol_a "FLAG42",16,120,1
+                                 +0  637    637 	symbol_a "FLAG4.ram_bit.bit2",16,120,2
+                                 +0  638    638 	symbol_a "FLAG43",16,121,1
+                                 +0  639    639 	symbol_a "FLAG4.ram_bit.bit3",16,121,2
+                                 +0  640    640 	symbol_a "FLAG44",16,122,1
+                                 +0  641    641 	symbol_a "FLAG4.ram_bit.bit4",16,122,2
+                                 +0  642    642 	symbol_a "FLAG45",16,123,1
+                                 +0  643    643 	symbol_a "FLAG4.ram_bit.bit5",16,123,2
+                                 +0  644    644 	symbol_a "FLAG46",16,124,1
+                                 +0  645    645 	symbol_a "FLAG4.ram_bit.bit6",16,124,2
+                                 +0  646    646 	symbol_a "FLAG47",16,125,1
+                                 +0  647    647 	symbol_a "FLAG4.ram_bit.bit7",16,125,2
+                                 +0  648    648 	symbol_a "FLAG5A",16,126,1
+                                 +0  649    649 	symbol_a "FLAG5.ram_byte",16,126,2
+                                 +0  650    650 	symbol_a "FLAG50",16,127,1
+                                 +0  651    651 	symbol_a "FLAG5.ram_bit.bit0",16,127,2
+                                 +0  652    652 	symbol_a "FLAG51",16,128,1
+                                 +0  653    653 	symbol_a "FLAG5.ram_bit.bit1",16,128,2
+                                 +0  654    654 	symbol_a "FLAG52",16,129,1
+                                 +0  655    655 	symbol_a "FLAG5.ram_bit.bit2",16,129,2
+                                 +0  656    656 	symbol_a "FLAG53",16,130,1
+                                 +0  657    657 	symbol_a "FLAG5.ram_bit.bit3",16,130,2
+                                 +0  658    658 	symbol_a "FLAG54",16,131,1
+                                 +0  659    659 	symbol_a "FLAG5.ram_bit.bit4",16,131,2
+                                 +0  660    660 	symbol_a "FLAG55",16,132,1
+                                 +0  661    661 	symbol_a "FLAG5.ram_bit.bit5",16,132,2
+                                 +0  662    662 	symbol_a "FLAG56",16,133,1
+                                 +0  663    663 	symbol_a "FLAG5.ram_bit.bit6",16,133,2
+                                 +0  664    664 	symbol_a "FLAG57",16,134,1
+                                 +0  665    665 	symbol_a "FLAG5.ram_bit.bit7",16,134,2
+                                 +0  666    666 	symbol_a "FLAG6A",16,135,1
+                                 +0  667    667 	symbol_a "FLAG6.ram_byte",16,135,2
+                                 +0  668    668 	symbol_a "FLAG60",16,136,1
+                                 +0  669    669 	symbol_a "FLAG6.ram_bit.bit0",16,136,2
+                                 +0  670    670 	symbol_a "FLAG61",16,137,1
+                                 +0  671    671 	symbol_a "FLAG6.ram_bit.bit1",16,137,2
+                                 +0  672    672 	symbol_a "FLAG62",16,138,1
+                                 +0  673    673 	symbol_a "FLAG6.ram_bit.bit2",16,138,2
+                                 +0  674    674 	symbol_a "FLAG63",16,139,1
+                                 +0  675    675 	symbol_a "FLAG6.ram_bit.bit3",16,139,2
+                                 +0  676    676 	symbol_a "FLAG64",16,140,1
+                                 +0  677    677 	symbol_a "FLAG6.ram_bit.bit4",16,140,2
+                                 +0  678    678 	symbol_a "FLAG65",16,141,1
+                                 +0  679    679 	symbol_a "FLAG6.ram_bit.bit5",16,141,2
+                                 +0  680    680 	symbol_a "FLAG66",16,142,1
+                                 +0  681    681 	symbol_a "FLAG6.ram_bit.bit6",16,142,2
+                                 +0  682    682 	symbol_a "FLAG67",16,143,1
+                                 +0  683    683 	symbol_a "FLAG6.ram_bit.bit7",16,143,2
+                                 +0  684    684 	symbol_a "ERROCODEA",16,144,1
+                                 +0  685    685 	symbol_a "ERROCODE.ram_byte",16,144,2
+                                 +0  686    686 	symbol_a "ERROCODE0",16,145,1
+                                 +0  687    687 	symbol_a "ERROCODE.ram_bit.bit0",16,145,2
+                                 +0  688    688 	symbol_a "ERROCODE1",16,146,1
+                                 +0  689    689 	symbol_a "ERROCODE.ram_bit.bit1",16,146,2
+                                 +0  690    690 	symbol_a "ERROCODE2",16,147,1
+                                 +0  691    691 	symbol_a "ERROCODE.ram_bit.bit2",16,147,2
+                                 +0  692    692 	symbol_a "ERROCODE3",16,148,1
+                                 +0  693    693 	symbol_a "ERROCODE.ram_bit.bit3",16,148,2
+                                 +0  694    694 	symbol_a "ERROCODE4",16,149,1
+                                 +0  695    695 	symbol_a "ERROCODE.ram_bit.bit4",16,149,2
+                                 +0  696    696 	symbol_a "ERROCODE5",16,150,1
+                                 +0  697    697 	symbol_a "ERROCODE.ram_bit.bit5",16,150,2
+                                 +0  698    698 	symbol_a "ERROCODE6",16,151,1
+                                 +0  699    699 	symbol_a "ERROCODE.ram_bit.bit6",16,151,2
+                                 +0  700    700 	symbol_a "ERROCODE7",16,152,1
+                                 +0  701    701 	symbol_a "ERROCODE.ram_bit.bit7",16,152,2
+                                 +0  702    702 	symbol_a "FLAGXA",16,153,1
+                                 +0  703    703 	symbol_a "FLAGX.ram_byte",16,153,2
+                                 +0  704    704 	symbol_a "FLAGX0",16,154,1
+                                 +0  705    705 	symbol_a "FLAGX.ram_bit.bit0",16,154,2
+                                 +0  706    706 	symbol_a "FLAGX1",16,155,1
+                                 +0  707    707 	symbol_a "FLAGX.ram_bit.bit1",16,155,2
+                                 +0  708    708 	symbol_a "FLAGX2",16,156,1
+                                 +0  709    709 	symbol_a "FLAGX.ram_bit.bit2",16,156,2
+                                 +0  710    710 	symbol_a "FLAGX3",16,157,1
+                                 +0  711    711 	symbol_a "FLAGX.ram_bit.bit3",16,157,2
+                                 +0  712    712 	symbol_a "FLAGX4",16,158,1
+                                 +0  713    713 	symbol_a "FLAGX.ram_bit.bit4",16,158,2
+                                 +0  714    714 	symbol_a "FLAGX5",16,159,1
+                                 +0  715    715 	symbol_a "FLAGX.ram_bit.bit5",16,159,2
+                                 +0  716    716 	symbol_a "FLAGX6",16,160,1
+                                 +0  717    717 	symbol_a "FLAGX.ram_bit.bit6",16,160,2
+                                 +0  718    718 	symbol_a "FLAGX7",16,161,1
+                                 +0  719    719 	symbol_a "FLAGX.ram_bit.bit7",16,161,2
+                                 +0  720    720 	symbol_a "FLAGYA",16,162,1
+                                 +0  721    721 	symbol_a "FLAGY.ram_byte",16,162,2
+                                 +0  722    722 	symbol_a "FLAGY0",16,163,1
+                                 +0  723    723 	symbol_a "FLAGY.ram_bit.bit0",16,163,2
+                                 +0  724    724 	symbol_a "FLAGY1",16,164,1
+                                 +0  725    725 	symbol_a "FLAGY.ram_bit.bit1",16,164,2
+                                 +0  726    726 	symbol_a "FLAGY2",16,165,1
+                                 +0  727    727 	symbol_a "FLAGY.ram_bit.bit2",16,165,2
+                                 +0  728    728 	symbol_a "FLAGY3",16,166,1
+                                 +0  729    729 	symbol_a "FLAGY.ram_bit.bit3",16,166,2
+                                 +0  730    730 	symbol_a "FLAGY4",16,167,1
+                                 +0  731    731 	symbol_a "FLAGY.ram_bit.bit4",16,167,2
+                                 +0  732    732 	symbol_a "FLAGY5",16,168,1
+                                 +0  733    733 	symbol_a "FLAGY.ram_bit.bit5",16,168,2
+                                 +0  734    734 	symbol_a "FLAGY6",16,169,1
+                                 +0  735    735 	symbol_a "FLAGY.ram_bit.bit6",16,169,2
+                                 +0  736    736 	symbol_a "FLAGY7",16,170,1
+                                 +0  737    737 	symbol_a "FLAGY.ram_bit.bit7",16,170,2
+                                 +0  738    738 	symbol_a "FLAGIA",16,171,1
+                                 +0  739    739 	symbol_a "FLAGI.ram_byte",16,171,2
+                                 +0  740    740 	symbol_a "FLAGI0",16,172,1
+                                 +0  741    741 	symbol_a "FLAGI.ram_bit.bit0",16,172,2
+                                 +0  742    742 	symbol_a "FLAGI1",16,173,1
+                                 +0  743    743 	symbol_a "FLAGI.ram_bit.bit1",16,173,2
+                                 +0  744    744 	symbol_a "FLAGI2",16,174,1
+                                 +0  745    745 	symbol_a "FLAGI.ram_bit.bit2",16,174,2
+                                 +0  746    746 	symbol_a "FLAGI3",16,175,1
+                                 +0  747    747 	symbol_a "FLAGI.ram_bit.bit3",16,175,2
+                                 +0  748    748 	symbol_a "FLAGI4",16,176,1
+                                 +0  749    749 	symbol_a "FLAGI.ram_bit.bit4",16,176,2
+                                 +0  750    750 	symbol_a "FLAGI5",16,177,1
+                                 +0  751    751 	symbol_a "FLAGI.ram_bit.bit5",16,177,2
+                                 +0  752    752 	symbol_a "FLAGI6",16,178,1
+                                 +0  753    753 	symbol_a "FLAGI.ram_bit.bit6",16,178,2
+                                 +0  754    754 	file "E:\PR_telremo\PR_telremoV1.c",0,0,0
+                                 +0  755    755 	symbol_a "FLAGI7",16,179,1
+                                 +0  756    756 	symbol_a "FLAGI.ram_bit.bit7",16,179,2
+                                 +0  757    757 	symbol_a "CRAMMIN",16,180,1
+                                 +0  758    758 	symbol_a "0x0040",16,180,2
+                                 +0  759    759 	symbol_a "CRAMMAX",16,181,1
+                                 +0  760    760 	symbol_a "0x013F",16,181,2
+                                 +0  761    761 	symbol_a "INTVECTOR",16,182,1
+                                 +0  762    762 	symbol_a "0xFFE0",16,182,2
+                                 +0  763    763 	symbol_a "uint",16,183,1
+                                 +0  764    764 	symbol_a "unsigned int",16,183,2
+                                 +0  765    765 	symbol_a "F_telsendflag",16,184,1
+                                 +0  766    766 	symbol_a "FLAG00",16,184,2
+                                 +0  767    767 	symbol_a "F_remoflag",16,185,1
+                                 +0  768    768 	symbol_a "FLAG01",16,185,2
+                                 +0  769    769 	symbol_a "F_remosingle",16,186,1
+                                 +0  770    770 	symbol_a "FLAG02",16,186,2
+                                 +0  771    771 	symbol_a "F_onesecflag",16,187,1
+                                 +0  772    772 	symbol_a "FLAG03",16,187,2
+                                 +0  773    773 	symbol_a "F_telsendstate",16,188,1
+                                 +0  774    774 	symbol_a "FLAG04",16,188,2
+                                 +0  775    775 	symbol_a "F_telsendsuc",16,189,1
+                                 +0  776    776 	symbol_a "FLAG05",16,189,2
+                                 +0  777    777 	symbol_a "F_telneedsend",16,190,1
+                                 +0  778    778 	symbol_a "FLAG06",16,190,2
+                                 +0  779    779 	symbol_a "F_telrecestate",16,191,1
+                                 +0  780    780 	symbol_a "FLAG07",16,191,2
+                                 +0  781    781 	symbol_a "F_telrecesuc",16,192,1
+                                 +0  782    782 	symbol_a "FLAG10",16,192,2
+                                 +0  783    783 	symbol_a "F_pswsuc",16,193,1
+                                 +0  784    784 	symbol_a "FLAG11",16,193,2
+                                 +0  785    785 	symbol_a "F_executionsuc",16,194,1
+                                 +0  786    786 	symbol_a "FLAG12",16,194,2
+                                 +0  787    787 	symbol_a "F_longsingle",16,195,1
+                                 +0  788    788 	symbol_a "FLAG13",16,195,2
+                                 +0  789    789 	symbol_a "F_shortsingle",16,196,1
+                                 +0  790    790 	symbol_a "FLAG14",16,196,2
+                                 +0  791    791 	symbol_a "PIN_8870d0",16,197,1
+                                 +0  792    792 	symbol_a "OP00",16,197,2
+                                 +0  793    793 	symbol_a "PIN_8870d1",16,198,1
+                                 +0  794    794 	symbol_a "OP01",16,198,2
+                                 +0  795    795 	symbol_a "PIN_8870d2",16,199,1
+                                 +0  796    796 	symbol_a "OP02",16,199,2
+                                 +0  797    797 	symbol_a "PIN_8870d3",16,200,1
+                                 +0  798    798 	symbol_a "OP03",16,200,2
+                                 +0  799    799 	symbol_a "PIN_8870oe",16,201,1
+                                 +0  800    800 	symbol_a "OP04",16,201,2
+                                 +0  801    801 	symbol_a "PIN_txd",16,202,1
+                                 +0  802    802 	symbol_a "OP05",16,202,2
+                                 +0  803    803 	symbol_a "PIN_volsingle",16,203,1
+                                 +0  804    804 	symbol_a "OP06",16,203,2
+                                 +0  805    805 	symbol_a "PIN_ringd",16,204,1
+                                 +0  806    806 	symbol_a "IP07",16,204,2
+                                 +0  807    807 	symbol_a "PIN_rxd",16,205,1
+                                 +0  808    808 	symbol_a "OP10",16,205,2
+                                 +0  809    809 	symbol_a "PIN_8870dv",16,206,1
+                                 +0  810    810 	symbol_a "OP20",16,206,2
+                                 +0  811    811 	symbol_a "PIN_ce",16,207,1
+                                 +0  812    812 	symbol_a "OP30",16,207,2
+                                 +0  813    813 	symbol_a "PIN_test",16,208,1
+                                 +0  814    814 	symbol_a "OP36",16,208,2
+                                 +0  815    815 	symbol_a "PIN_dethokdet",16,209,1
+                                 +0  816    816 	symbol_a "OP37",16,209,2
+                                 +0  817    817 	symbol_a "StartPPG",16,210,1
+                                 +0  818    818 	symbol_a "{R_tc1crback&=0xcf;R_tc1crback|=0x10;TC1CR=R_tc1crback;}",16,210,2
+                                 +0  819    819 	symbol_a "StopPPG",16,211,1
+                                 +0  820    820 	symbol_a "{R_tc1crback&=0XCF;TC1CR=R_tc1crback;}",16,211,2
+                                 +0  821    821 	symbol_a "INT0EN",16,212,1
+                                 +0  822    822 	symbol_a "EIRL4=1",16,212,2
+                                 +0  823    823 	symbol_a "INT0DIS",16,213,1
+                                 +0  824    824 	symbol_a "EIRL4=0",16,213,2
+                                 +0  825    825 	symbol_n "R_ringcounter",3,4,0
+                                 +0  826    826 	symbol_t 194,Z,"",3,1,"",2,0
+                                 +0  827    827 	symbol_t 195,O,194,1
+                                 +0  828    828 	symbol_n "R_telrecebuff",194,4,0
+                                 +0  829    829 	symbol_t 196,Z,"",3,1,"",8,0
+                                 +0  830    830 	symbol_t 197,O,196,1
+                                 +0  831    831 	symbol_n "R_telremobuff",196,4,0
+                                 +0  832    832 	symbol_n "R_longringtimer",3,4,0
+                                 +0  833    833 	symbol_n "R_40mscounter",3,4,0
+                                 +0  834    834 	symbol_n "R_onesecondcounter",3,4,0
+                                 +0  835    835 	symbol_n "R_dethoktimer",3,4,0
+                                 +0  836    836 	symbol_n "R_p3ioback",3,4,0
+                                 +0  837    837 	symbol_n "R_telsendbuffa",194,4,0
+                                 +0  838    838 	symbol_n "R_telsendbuffb",194,4,0
+                                 +0  839    839 	symbol_n "R_tc1crback",3,4,0
+                                 +0  840    840 	symbol_n "R_telsendtimer",3,4,0
+                                 +0  841    841 	symbol_n "R_telsendbufft",3,4,0
+                                 +0  842    842 	symbol_n "R_telcomcounter",3,4,0
+                                 +0  843    843 	symbol_n "R_telrecebuffadd",3,4,0
+                                 +0  844    844 	symbol_n "R_telrecebufft",3,4,0
+                                 +0  845    845 	symbol_n "R_ringcountertimer",3,4,0
+                                 +0  846    846 	symbol_n "R_ringph",3,4,0
+                                 +0  847    847 	symbol_n "R_clrcountertimer",3,4,0
+                                 +0  848    848 	symbol_n "R_dethokdetimer",3,4,0
+                                 +0  849    849 	symbol_n "R_telrececounter",3,4,0
+                                 +0  850    850 	symbol_n "R_shortringtimer",3,4,0
+                                 +0  851    851 	symbol_n "R_singlecounter",3,4,0
+                                 +0  852    852 	symbol_n "R_midtimer",3,4,0
+                                 +0  853    853 	symbol_n "R_pswcounter",3,4,0
+                                 +0  854    854 	symbol_n "R_pointer",3,4,0
+                                 +0  855    855 	symbol_n "R_intcounter",3,4,0
+                                 +0  856    856 	symbol_n "R_counter",3,4,0
+                                 +0  857    857 	symbol_t 198,xc,"",1,-1
+                                 +0  858    858 	symbol_t 199,O,198,1
+                                 +0  859    859 	symbol_n "Port_Ini",198,6,0
+                                 +0  860    860 	symbol_n "Mcu_Ini",198,6,0
+                                 +0  861    861 	symbol_n "Reg_Ini",198,6,0
+                                 +0  862    862 	symbol_n "Det_remo",198,6,0
+                                 +0  863    863 	symbol_n "Ringpr",198,6,0
+                                 +0  864    864 	symbol_n "Telsendpr",198,6,0
+                                 +0  865    865 	symbol_n "pre_telsenddate",198,6,0
+                                 +0  866    866 	symbol_n "Telrecepr",198,6,0
+                                 +0  867    867 	symbol_n "Telsendsub",198,6,0
+                                 +0  868    868 	symbol_n "Ringcounter",198,6,0
+                                 +0  869    869 	symbol_n "Onesecpr",198,6,0
+                                 +0  870    870 	symbol_t 200,xc,"",1,-1
+                                 +0  871    871 	symbol_t 201,O,200,1
+                                 +0  872    872 	symbol_n "Delayus",200,6,0
+                                 +0  873    873 	symbol_b "startup",5,0,1
+                                 +0  874    874 	symbol_t 202,xc,"startup",1,0
+                                 +0  875    875 	symbol_n "startup",202,4,1
+                                 +0  876    876 n_code section code medium align=1,1
+                                 +0  877    877 	symbol_a "startup",8,0,0
+                                 +0  878    878 	line "",140,1,0
+                                 +0  879    879 	public _startup
+00000000                         +0  880    880 _startup:
+                                 +0  881    881 	symbol_a "startup",6,0,0
+                                 +0  882    882 	symbol_a "startup",0,0,0
+                                 +0  883    883 	symbol_b "startup",6,0,1
+                                 +0  884    884 	symbol_b "startup",1,140,1
+                                 +0  885    885 	symbol_a "",51,0,0
+                                 +0  886    886 	line "",141,22,0
+00000000  0A3401                 +0  887    887 	ld	(_WDTCR1),0x1
+                                 +0  888    888 	line "",142,22,0
+00000003  0A35B1                 +0  889    889 	ld	(_WDTCR2),0xb1
+                                 +0  890    890 	line "",143,22,0
+00000006  0A3800                 +0  891    891 	ld	(_SYSCR1),0x0
+                                 +0  892    892 	line "",144,22,0
+00000009  0A3980                 +0  893    893 	ld	(_SYSCR2),0x80
+                                 +0  894    894 	line "",146,27,0
+0000000C  C83A                   +0  895    895 	DI	
+                                 +0  896    896 	line "",147,26,0
+0000000E  4B4000                 +0  897    897 	ld	HL,0x40
+                                 +0  898    898 	line "",148,36,0
+00000011  49FF00                 +0  899    899 	ld	BC,0xff
+                                 +0  900    900 	line "",149,51,0
+00000014  0B00                   +0  901    901 INIT_RAM:LD	(HL),0x00	
+                                 +0  902    902 	line "",150,51,0
+00000016  33                     +0  903    903 		INC	HL		
+                                 +0  904    904 	line "",151,51,0
+00000017  39                     +0  905    905 		DEC	BC		
+                                 +0  906    906 	line "",152,51,0
+00000018  BA                     +0  907    907 		J	F,INIT_RAM	
+                                 +0  908    908 	line "",153,26,0
+00000019  4E3F01                 +0  909    909 	ld	SP,0x13f
+                                 +0  910    910 	line "",155,19,0
+0000001C  FD0000               R +0  911    911 	cal	_Port_Ini
+                                 +0  912    912 	line "",156,18,0
+0000001F  FD0000               R +0  913    913 	cal	_Mcu_Ini
+                                 +0  914    914 	line "",158,22,0
+00000022  C03A                   +0  915    915  EI 
+                                 +0  916    916 	line "",160,18,0
+00000024  FD0000               R +0  917    917 	cal	_Reg_Ini
+00000027                         +0  918    918 L2:
+                                 +0  919    919 	line "",165,30,0
+00000027  FD0000               R +0  920    920 	cal	_Ringcounter
+                                 +0  921    921 	line "",166,27,0
+0000002A  FD0000               R +0  922    922 	cal	_Det_remo
+                                 +0  923    923 	line "",167,27,0
+0000002D  FD0000               R +0  924    924 	cal	_Onesecpr
+                                 +0  925    925 	line "",168,25,0
+00000030  FD0000               R +0  926    926 	cal	_Ringpr
+                                 +0  927    927 	line "",169,28,0
+00000033  FD0000               R +0  928    928 	cal	_Telsendpr
+                                 +0  929    929 	line "",172,29,0
+00000036  FD0000               R +0  930    930 	cal	_Telsendsub
+                                 +0  931    931 	line "",173,28,0
+00000039  FD0000               R +0  932    932 	cal	_Telrecepr
+                                 +0  933    933 	line "",162,14,0
+0000003C  FCE9                   +0  934    934 	j	L2
+                                 +0  935    935 	line "",176,1,0
+                                 +0  936    936 	symbol_b "startup",2,176,1
+                                 +0  937    937 	symbol_b "Port_Ini",5,0,1
+                                 +0  938    938 	symbol_t 203,xc,"Port_Ini",1,0
+                                 +0  939    939 	symbol_n "Port_Ini",203,4,1
+                                 +0  940    940 	symbol_a "Port_Ini",8,0,0
+                                 +0  941    941 	line "",181,1,0
+                                 +0  942    942 	public _Port_Ini
+0000003E                         +0  943    943 _Port_Ini:
+                                 +0  944    944 	symbol_t 10000,nv,83,0
+                                 +0  945    945 	symbol_t 10001,O,10000,1
+                                 +0  946    946 	symbol_a "Port_Ini",6,0,0
+                                 +0  947    947 	symbol_a "Port_Ini",0,0,0
+                                 +0  948    948 	symbol_b "Port_Ini",6,0,1
+                                 +0  949    949 	symbol_b "Port_Ini",1,181,1
+                                 +0  950    950 	symbol_a "",51,0,0
+                                 +0  951    951 	line "",182,17,0
+0000003E  0A008F                 +0  952    952 	ld	(_P0DR),0x8f
+                                 +0  953    953 	line "",185,19,0
+00000041  0A0B70                 +0  954    954 	ld	(_P0OUTCR),0x70
+                                 +0  955    955 	line "",187,17,0
+00000044  0A0101                 +0  956    956 	ld	(_P1DR),0x1
+                                 +0  957    957 	line "",188,19,0
+00000047  0A09FE                 +0  958    958 	ld	(_P1CR),0xfe
+                                 +0  959    959 	line "",190,17,0
+0000004A  0A0201                 +0  960    960 	ld	(_P2DR),0x1
+                                 +0  961    961 	line "",192,24,0
+0000004D  0A00FE               R +0  962    962 	ld	(_R_p3ioback),0xfe
+                                 +0  963    963 	line "",193,25,0
+00000050  0A0AFE                 +0  964    964 	ld	(_P3CR),0xfe
+                                 +0  965    965 	line "",194,17,0
+00000053  0A0301                 +0  966    966 	ld	(_P3DR),0x1
+                                 +0  967    967 	line "",196,20,0
+00000056  0A0E17                 +0  968    968 	ld	(_ADCCR1),0x17
+                                 +0  969    969 	line "",198,1,0
+00000059  FA                     +0  970    970 	ret
+                                 +0  971    971 	symbol_b "Port_Ini",2,198,1
+                                 +0  972    972 	symbol_b "Mcu_Ini",5,0,1
+                                 +0  973    973 	symbol_t 204,xc,"Mcu_Ini",1,0
+                                 +0  974    974 	symbol_n "Mcu_Ini",204,4,1
+                                 +0  975    975 	symbol_a "Mcu_Ini",8,0,0
+                                 +0  976    976 	line "",202,1,0
+                                 +0  977    977 	public _Mcu_Ini
+0000005A                         +0  978    978 _Mcu_Ini:
+                                 +0  979    979 	symbol_t 10002,nv,83,0
+                                 +0  980    980 	symbol_t 10003,O,10002,1
+                                 +0  981    981 	symbol_t 10004,nv,7,0
+                                 +0  982    982 	symbol_t 10005,O,10004,1
+                                 +0  983    983 	symbol_t 10006,nv,67,0
+                                 +0  984    984 	symbol_t 10007,O,10006,1
+                                 +0  985    985 	symbol_a "Mcu_Ini",6,0,0
+                                 +0  986    986 	symbol_a "Mcu_Ini",0,0,0
+                                 +0  987    987 	symbol_b "Mcu_Ini",6,0,1
+                                 +0  988    988 	symbol_b "Mcu_Ini",1,202,1
+                                 +0  989    989 	symbol_a "",51,0,0
+                                 +0  990    990 	line "",203,22,0
+0000005A  0A37D4                 +0  991    991 	ld	(_EINTCR),0xd4
+                                 +0  992    992 	line "",204,22,0
+0000005D  0A3E00                 +0  993    993 	ld	(_INTSEL),0x0
+                                 +0  994    994 	line "",206,19,0
+00000060  0A3B80                 +0  995    995 	ld	(_EIRH),0x80
+                                 +0  996    996 	line "",207,21,0
+00000063  0A3A50                 +0  997    997 	ld	(_EIRL),0x50
+                                 +0  998    998 	line "",209,21,0
+00000066  0A360A                 +0  999    999 	ld	(_TBTCR),0xa
+                                 +0 1000   1000 	line "",211,20,0
+00000069  0A0E30                 +0 1001   1001 	ld	(_ADCCR1),0x30
+                                 +0 1002   1002 	line "",214,19,0
+0000006C  0A148B                 +0 1003   1003 	ld	(_TC1CR),0x8b
+                                 +0 1004   1004 	line "",217,23,0
+0000006F  0810E803               +0 1005   1005 	ldw	(_TC1DRA),0x3e8
+                                 +0 1006   1006 	line "",218,22,0
+00000073  0812F401               +0 1007   1007 	ldw	(_TC1DRB),0x1f4
+                                 +0 1008   1008 	line "",220,24,0
+00000077  C600                   +0 1009   1009 	set	(_P0DR).6
+                                 +0 1010   1010 	line "",222,1,0
+00000079  FA                     +0 1011   1011 	ret
+                                 +0 1012   1012 	symbol_b "Mcu_Ini",2,222,1
+                                 +0 1013   1013 	symbol_b "Reg_Ini",5,0,1
+                                 +0 1014   1014 	symbol_t 205,xc,"Reg_Ini",1,0
+                                 +0 1015   1015 	symbol_n "Reg_Ini",205,4,1
+                                 +0 1016   1016 	symbol_a "Reg_Ini",8,0,0
+                                 +0 1017   1017 	line "",225,1,0
+                                 +0 1018   1018 	public _Reg_Ini
+0000007A                         +0 1019   1019 _Reg_Ini:
+                                 +0 1020   1020 	symbol_a "Reg_Ini",6,0,0
+                                 +0 1021   1021 	symbol_a "Reg_Ini",0,0,0
+                                 +0 1022   1022 	symbol_b "Reg_Ini",6,0,1
+                                 +0 1023   1023 	symbol_b "Reg_Ini",1,225,1
+                                 +0 1024   1024 	symbol_a "",51,0,0
+                                 +0 1025   1025 	line "",226,24,0
+0000007A  0A0000               R +0 1026   1026 	ld	(_R_ringcounter),0x0
+                                 +0 1027   1027 	line "",227,29,0
+0000007D  0A0000               R +0 1028   1028 	ld	(_R_ringcountertimer),0x0
+                                 +0 1029   1029 	line "",228,26,0
+00000080  0A0000               R +0 1030   1030 	ld	(_R_longringtimer),0x0
+                                 +0 1031   1031 	line "",229,19,0
+00000083  0A0000               R +0 1032   1032 	ld	(_R_ringph),0x0
+                                 +0 1033   1033 	line "",230,24,0
+00000086  0A0000               R +0 1034   1034 	ld	(_R_dethoktimer),0x0
+                                 +0 1035   1035 	line "",231,20,0
+00000089  0A0000               R +0 1036   1036 	ld	(_R_pointer),0x0
+                                 +0 1037   1037 	line "",232,20,0
+0000008C  F10000F900           R +0 1038   1038 	ld	(_R_counter),0x0
+                                 +0 1039   1039 	line "",233,21,0
+00000091  0A0000               R +0 1040   1040 	ld	(_R_midtimer),0x0
+                                 +0 1041   1041 	line "",234,21,0
+00000094  C900                 R +0 1042   1042 	clr	(_FLAG0).1
+                                 +0 1043   1043 	line "",235,19,0
+00000096  C900                 R +0 1044   1044 	clr	(_FLAG1).1
+                                 +0 1045   1045 	line "",236,23,0
+00000098  CA00                 R +0 1046   1046 	clr	(_FLAG0).2
+                                 +0 1047   1047 	line "",237,25,0
+0000009A  CA00                 R +0 1048   1048 	clr	(_FLAG1).2
+                                 +0 1049   1049 	line "",238,1,0
+0000009C  FA                     +0 1050   1050 	ret
+                                 +0 1051   1051 	symbol_b "Reg_Ini",2,238,1
+                                 +0 1052   1052 	symbol_b "Ringcounter",5,0,1
+                                 +0 1053   1053 	symbol_t 206,xc,"Ringcounter",1,0
+                                 +0 1054   1054 	symbol_n "Ringcounter",206,4,1
+                                 +0 1055   1055 	symbol_a "Ringcounter",8,0,0
+                                 +0 1056   1056 	line "",242,1,0
+                                 +0 1057   1057 	public _Ringcounter
+0000009D                         +0 1058   1058 _Ringcounter:
+                                 +0 1059   1059 	symbol_t 10008,nv,83,0
+                                 +0 1060   1060 	symbol_t 10009,O,10008,1
+                                 +0 1061   1061 	symbol_t 10010,nv,65,0
+                                 +0 1062   1062 	symbol_t 10011,O,10010,1
+                                 +0 1063   1063 	symbol_a "Ringcounter",6,0,0
+                                 +0 1064   1064 	symbol_a "Ringcounter",0,0,0
+                                 +0 1065   1065 	symbol_b "Ringcounter",6,0,1
+                                 +0 1066   1066 	symbol_b "Ringcounter",1,242,1
+                                 +0 1067   1067 	symbol_a "",51,0,0
+                                 +0 1068   1068 	line "",243,22,0
+0000009D  5F0C                   +0 1069   1069 	test	(_P0PRD).7
+0000009F  AC                     +0 1070   1070 	j	f,L3
+                                 +0 1071   1071 	line "",245,46,0
+000000A0  0A000F               R +0 1072   1072 	ld	(_R_ringcountertimer),0xf
+                                 +0 1073   1073 	line "",246,44,0
+000000A3  0A0000               R +0 1074   1074 	ld	(_R_clrcountertimer),0x0
+                                 +0 1075   1075 	line "",247,43,0
+000000A6  0A0000               R +0 1076   1076 	ld	(_R_dethokdetimer),0x0
+                                 +0 1077   1077 	line "",248,35,0
+000000A9  0A0001               R +0 1078   1078 	ld	(_R_ringph),0x1
+000000AC  FA                     +0 1079   1079 	ret
+000000AD                         +0 1080   1080 L3:
+                                 +0 1081   1081 	line "",251,50,0
+000000AD  070000               R +0 1082   1082 	cmp	(_R_ringcountertimer),0x0
+000000B0  A9                     +0 1083   1083 	j	f,L4
+000000B1  070001               R +0 1084   1084 	cmp	(_R_ringph),0x1
+000000B4  A5                     +0 1085   1085 	j	f,L4
+                                 +0 1086   1086 	line "",253,40,0
+000000B5  E000F0               R +0 1087   1087 	inc	(_R_ringcounter)
+                                 +0 1088   1088 	line "",254,35,0
+000000B8  0A0000               R +0 1089   1089 	ld	(_R_ringph),0x0
+000000BB                         +0 1090   1090 L4:
+                                 +0 1091   1091 	line "",260,1,0
+000000BB  FA                     +0 1092   1092 	ret
+                                 +0 1093   1093 	symbol_b "Ringcounter",2,260,1
+                                 +0 1094   1094 	symbol_b "Det_remo",5,0,1
+                                 +0 1095   1095 	symbol_t 207,xc,"Det_remo",1,0
+                                 +0 1096   1096 	symbol_n "Det_remo",207,4,1
+                                 +0 1097   1097 	symbol_a "Det_remo",8,0,0
+                                 +0 1098   1098 	line "",263,1,0
+                                 +0 1099   1099 	public _Det_remo
+000000BC                         +0 1100   1100 _Det_remo:
+                                 +0 1101   1101 	symbol_n "i",3,1,1
+                                 +0 1102   1102 	symbol_t 10012,nv,83,0
+                                 +0 1103   1103 	symbol_t 10013,O,10012,1
+                                 +0 1104   1104 	symbol_t 10014,nv,71,0
+                                 +0 1105   1105 	symbol_t 10015,O,10014,1
+                                 +0 1106   1106 	symbol_t 10016,nv,65,0
+                                 +0 1107   1107 	symbol_t 10017,O,10016,1
+                                 +0 1108   1108 	symbol_t 10018,nv,65,0
+                                 +0 1109   1109 	symbol_t 10019,O,10018,1
+                                 +0 1110   1110 	symbol_t 10020,nv,71,0
+                                 +0 1111   1111 	symbol_t 10021,O,10020,1
+                                 +0 1112   1112 	symbol_a "Det_remo",6,0,0
+                                 +0 1113   1113 	symbol_a "Det_remo",0,0,0
+                                 +0 1114   1114 	symbol_b "Det_remo",6,0,1
+                                 +0 1115   1115 	symbol_b "Det_remo",1,263,1
+                                 +0 1116   1116 	symbol_a "",51,0,0
+                                 +0 1117   1117 	line "",266,28,0
+000000BC  0C00                 R +0 1118   1118 	ld	A,(_R_ringcounter)
+000000BE  6705                   +0 1119   1119 	cmp	A,0x5
+000000C0  DA13                   +0 1120   1120 	j	lt,L7
+                                 +0 1121   1121 	line "",268,31,0
+000000C2  C43A                   +0 1122   1122 	set	(_EIRL).4
+                                 +0 1123   1123 	line "",270,37,0
+000000C4  C100                 R +0 1124   1124 	set	(_FLAG0).1
+                                 +0 1125   1125 	line "",272,41,0
+000000C6  C703                   +0 1126   1126 	set	(_P3DR).7
+                                 +0 1127   1127 	line "",274,39,0
+000000C8  C300                 R +0 1128   1128 	set	(_FLAG1).3
+                                 +0 1129   1129 	line "",276,44,0
+000000CA  0A0028               R +0 1130   1130 	ld	(_R_longringtimer),0x28
+                                 +0 1131   1131 	line "",278,40,0
+000000CD  C200                 R +0 1132   1132 	set	(_FLAG0).2
+                                 +0 1133   1133 	line "",280,41,0
+000000CF  0A0000               R +0 1134   1134 	ld	(_R_ringcounter),0x0
+                                 +0 1135   1135 	line "",282,43,0
+000000D2  0A0000               R +0 1136   1136 	ld	(_R_dethokdetimer),0x0
+000000D5                         +0 1137   1137 L7:
+                                 +0 1138   1138 	line "",285,59,0
+000000D5  0C00                 R +0 1139   1139 	ld	A,(_R_dethokdetimer)
+000000D7  6714                   +0 1140   1140 	cmp	A,0x14
+000000D9  DB05                   +0 1141   1141 	j	ge,L8
+000000DB  070003               R +0 1142   1142 	cmp	(_R_pswcounter),0x3
+000000DE  DC19                   +0 1143   1143 	j	le,L9
+000000E0                         +0 1144   1144 L8:
+                                 +0 1145   1145 	line "",288,42,0
+000000E0  0A0000               R +0 1146   1146 	ld	(_R_dethokdetimer),0x0
+                                 +0 1147   1147 	line "",290,40,0
+000000E3  CF03                   +0 1148   1148 	clr	(_P3DR).7
+                                 +0 1149   1149 	line "",292,32,0
+000000E5  CC3A                   +0 1150   1150 	clr	(_EIRL).4
+                                 +0 1151   1151 	line "",294,39,0
+000000E7  0A0000               R +0 1152   1152 	ld	(_R_pswcounter),0x0
+                                 +0 1153   1153 	line "",296,36,0
+000000EA  0A0000               R +0 1154   1154 	ld	(_R_pointer),0x0
+                                 +0 1155   1155 	line "",298,37,0
+000000ED  C900                 R +0 1156   1156 	clr	(_FLAG0).1
+                                 +0 1157   1157 	line "",300,35,0
+000000EF  C900                 R +0 1158   1158 	clr	(_FLAG1).1
+                                 +0 1159   1159 	line "",302,41,0
+000000F1  CA00                 R +0 1160   1160 	clr	(_FLAG1).2
+                                 +0 1161   1161 	line "",304,39,0
+000000F3  CA00                 R +0 1162   1162 	clr	(_FLAG0).2
+                                 +0 1163   1163 	line "",306,39,0
+000000F5  CB00                 R +0 1164   1164 	clr	(_FLAG1).3
+                                 +0 1165   1165 	line "",308,40,0
+000000F7  CC00                 R +0 1166   1166 	clr	(_FLAG1).4
+000000F9                         +0 1167   1167 L9:
+                                 +0 1168   1168 	line "",315,1,0
+000000F9  FA                     +0 1169   1169 	ret
+                                 +0 1170   1170 	symbol_b "Det_remo",2,315,1
+                                 +0 1171   1171 	symbol_b "Onesecpr",5,0,1
+                                 +0 1172   1172 	symbol_t 208,xc,"Onesecpr",1,0
+                                 +0 1173   1173 	symbol_n "Onesecpr",208,4,1
+                                 +0 1174   1174 	symbol_a "Onesecpr",8,0,0
+                                 +0 1175   1175 	line "",318,1,0
+                                 +0 1176   1176 	public _Onesecpr
+000000FA                         +0 1177   1177 _Onesecpr:
+                                 +0 1178   1178 	symbol_a "Onesecpr",6,0,0
+                                 +0 1179   1179 	symbol_a "Onesecpr",0,0,0
+                                 +0 1180   1180 	symbol_b "Onesecpr",6,0,1
+                                 +0 1181   1181 	symbol_b "Onesecpr",1,318,1
+                                 +0 1182   1182 	symbol_a "",51,0,0
+                                 +0 1183   1183 	line "",319,24,0
+000000FA  5B00                 R +0 1184   1184 	test	(_FLAG0).3
+000000FC  8A                     +0 1185   1185 	j	t,L10
+                                 +0 1186   1186 	line "",321,39,0
+000000FD  CB00                 R +0 1187   1187 	clr	(_FLAG0).3
+                                 +0 1188   1188 	line "",323,38,0
+000000FF  5900                 R +0 1189   1189 	test	(_FLAG0).1
+00000101  82                     +0 1190   1190 	j	t,L11
+                                 +0 1191   1191 	line "",323,67,0
+00000102  E000F0               R +0 1192   1192 	inc	(_R_dethokdetimer)
+00000105                         +0 1193   1193 L11:
+                                 +0 1194   1194 	line "",325,44,0
+00000105  E000F0               R +0 1195   1195 	inc	(_R_clrcountertimer)
+00000108                         +0 1196   1196 L10:
+                                 +0 1197   1197 	line "",327,1,0
+00000108  FA                     +0 1198   1198 	ret
+                                 +0 1199   1199 	symbol_b "Onesecpr",2,327,1
+                                 +0 1200   1200 	symbol_b "Ringpr",5,0,1
+                                 +0 1201   1201 	symbol_t 209,xc,"Ringpr",1,0
+                                 +0 1202   1202 	symbol_n "Ringpr",209,4,1
+                                 +0 1203   1203 	symbol_a "Ringpr",8,0,0
+                                 +0 1204   1204 	line "",330,1,0
+                                 +0 1205   1205 	public _Ringpr
+00000109                         +0 1206   1206 _Ringpr:
+                                 +0 1207   1207 	symbol_a "Ringpr",6,0,0
+                                 +0 1208   1208 	symbol_a "Ringpr",0,0,0
+                                 +0 1209   1209 	symbol_b "Ringpr",6,0,1
+                                 +0 1210   1210 	symbol_b "Ringpr",1,330,1
+                                 +0 1211   1211 	symbol_a "",51,0,0
+                                 +0 1212   1212 	line "",332,25,0
+00000109  5B00                 R +0 1213   1213 	test	(_FLAG1).3
+0000010B  DE19                   +0 1214   1214 	j	t,L12
+                                 +0 1215   1215 	line "",334,56,0
+0000010D  5A00                 R +0 1216   1216 	test	(_FLAG0).2
+0000010F  8C                     +0 1217   1217 	j	t,L14
+00000110  070000               R +0 1218   1218 	cmp	(_R_longringtimer),0x0
+00000113  88                     +0 1219   1219 	j	t,L14
+                                 +0 1220   1220 	line "",336,35,0
+00000114  0A149B                 +0 1221   1221 	ld	(_TC1CR),0x9b
+                                 +0 1222   1222 	line "",337,41,0
+00000117  CA00                 R +0 1223   1223 	clr	(_FLAG1).2
+                                 +0 1224   1224 	line "",338,39,0
+00000119  CA00                 R +0 1225   1225 	clr	(_FLAG0).2
+0000011B  FC09                   +0 1226   1226 	j	L12
+0000011D                         +0 1227   1227 L14:
+                                 +0 1228   1228 	line "",342,38,0
+0000011D  070000               R +0 1229   1229 	cmp	(_R_longringtimer),0x0
+00000120  A4                     +0 1230   1230 	j	f,L12
+                                 +0 1231   1231 	line "",344,39,0
+00000121  CB00                 R +0 1232   1232 	clr	(_FLAG1).3
+                                 +0 1233   1233 	line "",345,35,0
+00000123  0A148B                 +0 1234   1234 	ld	(_TC1CR),0x8b
+00000126                         +0 1235   1235 L12:
+                                 +0 1236   1236 	line "",349,26,0
+00000126  5C00                 R +0 1237   1237 	test	(_FLAG1).4
+00000128  DE33                   +0 1238   1238 	j	t,L17
+                                 +0 1239   1239 	line "",352,39,0
+0000012A  E1000040             R +0 1240   1240 	ld	A,(_R_counter)
+0000012E  6705                   +0 1241   1241 	cmp	A,0x5
+00000130  DB1B                   +0 1242   1242 	j	ge,L18
+                                 +0 1243   1243 	line "",354,57,0
+00000132  0C00                 R +0 1244   1244 	ld	A,(_R_midtimer)
+00000134  D913                   +0 1245   1245 	j	ne,L19
+                                 +0 1246   1246 	line "",356,79,0
+00000136  070000               R +0 1247   1247 	cmp	(_R_shortringtimer),0x0
+00000139  83                     +0 1248   1248 	j	t,L20
+                                 +0 1249   1249 	line "",359,83,0
+0000013A  0A149B                 +0 1250   1250 	ld	(_TC1CR),0x9b
+0000013D  FA                     +0 1251   1251 	ret
+0000013E                         +0 1252   1252 L20:
+                                 +0 1253   1253 	line "",363,86,0
+0000013E  0A000D               R +0 1254   1254 	ld	(_R_midtimer),0xd
+                                 +0 1255   1255 	line "",364,84,0
+00000141  E10000F0             R +0 1256   1256 	inc	(_R_counter)
+                                 +0 1257   1257 	line "",365,83,0
+00000145  0A148B                 +0 1258   1258 	ld	(_TC1CR),0x8b
+00000148  FA                     +0 1259   1259 	ret
+00000149                         +0 1260   1260 L19:
+                                 +0 1261   1261 	line "",370,75,0
+00000149  0A0008               R +0 1262   1262 	ld	(_R_shortringtimer),0x8
+0000014C  FA                     +0 1263   1263 	ret
+0000014D                         +0 1264   1264 L18:
+                                 +0 1265   1265 	line "",376,51,0
+0000014D  0A148B                 +0 1266   1266 	ld	(_TC1CR),0x8b
+                                 +0 1267   1267 	line "",377,52,0
+00000150  F10000F900           R +0 1268   1268 	ld	(_R_counter),0x0
+                                 +0 1269   1269 	line "",378,56,0
+00000155  CC00                 R +0 1270   1270 	clr	(_FLAG1).4
+                                 +0 1271   1271 	line "",379,59,0
+00000157  0A0000               R +0 1272   1272 	ld	(_R_shortringtimer),0x0
+                                 +0 1273   1273 	line "",380,53,0
+0000015A  0A0000               R +0 1274   1274 	ld	(_R_midtimer),0x0
+0000015D                         +0 1275   1275 L17:
+                                 +0 1276   1276 	line "",385,1,0
+0000015D  FA                     +0 1277   1277 	ret
+                                 +0 1278   1278 	symbol_b "Ringpr",2,385,1
+                                 +0 1279   1279 	symbol_b "pre_telsenddate",5,0,1
+                                 +0 1280   1280 	symbol_t 210,xc,"pre_telsenddate",1,0
+                                 +0 1281   1281 	symbol_n "pre_telsenddate",210,4,1
+                                 +0 1282   1282 	symbol_a "pre_telsenddate",8,0,0
+                                 +0 1283   1283 	line "",388,1,0
+                                 +0 1284   1284 	public _pre_telsenddate
+0000015E                         +0 1285   1285 _pre_telsenddate:
+                                 +0 1286   1286 	symbol_n "i",3,1,1
+                                 +0 1287   1287 	symbol_t 10022,nv,83,0
+                                 +0 1288   1288 	symbol_t 10023,O,10022,1
+                                 +0 1289   1289 	symbol_t 10024,nv,65,0
+                                 +0 1290   1290 	symbol_t 10025,O,10024,1
+                                 +0 1291   1291 	symbol_t 10026,nv,65,0
+                                 +0 1292   1292 	symbol_t 10027,O,10026,1
+                                 +0 1293   1293 	symbol_a "pre_telsenddate",6,0,0
+                                 +0 1294   1294 	symbol_a "pre_telsenddate",0,0,0
+                                 +0 1295   1295 	symbol_b "pre_telsenddate",6,0,1
+                                 +0 1296   1296 	symbol_b "pre_telsenddate",1,388,1
+                                 +0 1297   1297 	symbol_a "",51,0,0
+                                 +0 1298   1298 	line "",390,16,0
+0000015E  480000               R +0 1299   1299 	ld	WA,_R_telsendbuffa
+00000161  E84A                   +0 1300   1300 	ld	DE,WA
+00000163  30                     +0 1301   1301 	inc	WA
+00000164  30                     +0 1302   1302 	inc	WA
+00000165                         +0 1303   1303 L25:
+                                 +0 1304   1304 	line "",392,44,0
+00000165  F2F900                 +0 1305   1305 	ld	(DE),0x0
+                                 +0 1306   1306 	line "",390,24,0
+00000168  32                     +0 1307   1307 	inc	DE
+                                 +0 1308   1308 	line "",390,20,0
+00000169  E897                   +0 1309   1309 	cmp	DE,WA
+0000016B  DAF8                   +0 1310   1310 	j	lt,L25
+                                 +0 1311   1311 	line "",397,17,0
+0000016D  C800                 R +0 1312   1312 	clr	(_FLAGX).0
+                                 +0 1313   1313 	line "",398,17,0
+0000016F  C900                 R +0 1314   1314 	clr	(_FLAGX).1
+                                 +0 1315   1315 	line "",399,17,0
+00000171  CA00                 R +0 1316   1316 	clr	(_FLAGX).2
+                                 +0 1317   1317 	line "",400,17,0
+00000173  CB00                 R +0 1318   1318 	clr	(_FLAGX).3
+                                 +0 1319   1319 	line "",402,17,0
+00000175  CC00                 R +0 1320   1320 	clr	(_FLAGX).4
+                                 +0 1321   1321 	line "",403,17,0
+00000177  CD00                 R +0 1322   1322 	clr	(_FLAGX).5
+                                 +0 1323   1323 	line "",404,17,0
+00000179  CE00                 R +0 1324   1324 	clr	(_FLAGX).6
+                                 +0 1325   1325 	line "",405,26,0
+0000017B  5900                 R +0 1326   1326 	ld	CF,(_FLAG0).1
+0000017D  E000EF               R +0 1327   1327 	ld	(_FLAGX).7,CF
+                                 +0 1328   1328 	line "",407,33,0
+00000180  0C00                 R +0 1329   1329 	ld	A,(_FLAGX)
+00000182  0E00                 R +0 1330   1330 	ld	(_R_telsendbuffa),A
+                                 +0 1331   1331 	line "",410,16,0
+00000184  CF3B                   +0 1332   1332 	clr	(_EIRH).7
+                                 +0 1333   1333 	line "",411,24,0
+00000186  070000               R +0 1334   1334 	cmp	(_R_pointer),0x0
+00000189  DE2A                   +0 1335   1335 	j	t,L26
+                                 +0 1336   1336 	line "",413,60,0
+0000018B  0C00                 R +0 1337   1337 	ld	A,(_R_telsendbuffa)
+0000018D  E00006               R +0 1338   1338 	or	A,(_R_telremobuff)
+00000190  0E00                 R +0 1339   1339 	ld	(_R_telsendbuffa),A
+                                 +0 1340   1340 	line "",414,58,0
+00000192  0C00                 R +0 1341   1341 	ld	A,(_R_telremobuff + 0x1)
+00000194  0E00                 R +0 1342   1342 	ld	(_R_telremobuff),A
+                                 +0 1343   1343 	line "",415,58,0
+00000196  0C00                 R +0 1344   1344 	ld	A,(_R_telremobuff + 0x2)
+00000198  0E00                 R +0 1345   1345 	ld	(_R_telremobuff + 0x1),A
+                                 +0 1346   1346 	line "",416,58,0
+0000019A  0C00                 R +0 1347   1347 	ld	A,(_R_telremobuff + 0x3)
+0000019C  0E00                 R +0 1348   1348 	ld	(_R_telremobuff + 0x2),A
+                                 +0 1349   1349 	line "",417,58,0
+0000019E  0C00                 R +0 1350   1350 	ld	A,(_R_telremobuff + 0x4)
+000001A0  0E00                 R +0 1351   1351 	ld	(_R_telremobuff + 0x3),A
+                                 +0 1352   1352 	line "",418,58,0
+000001A2  0C00                 R +0 1353   1353 	ld	A,(_R_telremobuff + 0x5)
+000001A4  0E00                 R +0 1354   1354 	ld	(_R_telremobuff + 0x4),A
+                                 +0 1355   1355 	line "",419,58,0
+000001A6  0C00                 R +0 1356   1356 	ld	A,(_R_telremobuff + 0x6)
+000001A8  0E00                 R +0 1357   1357 	ld	(_R_telremobuff + 0x5),A
+                                 +0 1358   1358 	line "",420,58,0
+000001AA  0C00                 R +0 1359   1359 	ld	A,(_R_telremobuff + 0x7)
+000001AC  0E00                 R +0 1360   1360 	ld	(_R_telremobuff + 0x6),A
+                                 +0 1361   1361 	line "",421,58,0
+000001AE  0C00                 R +0 1362   1362 	ld	A,(_R_telremobuff + 0x8)
+000001B0  0E00                 R +0 1363   1363 	ld	(_R_telremobuff + 0x7),A
+                                 +0 1364   1364 	line "",422,36,0
+000001B2  E000F8               R +0 1365   1365 	dec	(_R_pointer)
+000001B5                         +0 1366   1366 L26:
+                                 +0 1367   1367 	line "",425,16,0
+000001B5  C73B                   +0 1368   1368 	set	(_EIRH).7
+                                 +0 1369   1369 	line "",431,26,0
+000001B7  5E00                 R +0 1370   1370 	test	(_FLAG0).6
+000001B9  A7                     +0 1371   1371 	j	f,L27
+                                 +0 1372   1372 	line "",433,66,0
+000001BA  0C00                 R +0 1373   1373 	ld	A,(_R_telsendbuffb)
+000001BC  E00007               R +0 1374   1374 	cmp	A,(_R_telsendbuffa)
+000001BF  81                     +0 1375   1375 	j	t,L27
+                                 +0 1376   1376 	line "",435,56,0
+000001C0  C600                 R +0 1377   1377 	set	(_FLAG0).6
+000001C2                         +0 1378   1378 L27:
+                                 +0 1379   1379 	line "",439,1,0
+000001C2  FA                     +0 1380   1380 	ret
+                                 +0 1381   1381 	symbol_b "pre_telsenddate",2,439,1
+                                 +0 1382   1382 	symbol_b "Telsendpr",5,0,1
+                                 +0 1383   1383 	symbol_t 211,xc,"Telsendpr",1,0
+                                 +0 1384   1384 	symbol_n "Telsendpr",211,4,1
+                                 +0 1385   1385 	symbol_a "Telsendpr",8,0,0
+                                 +0 1386   1386 	line "",442,1,0
+                                 +0 1387   1387 	public _Telsendpr
+000001C3                         +0 1388   1388 _Telsendpr:
+                                 +0 1389   1389 	symbol_n "i",3,1,1
+                                 +0 1390   1390 	symbol_a "Telsendpr",6,0,0
+                                 +0 1391   1391 	symbol_a "Telsendpr",0,0,0
+                                 +0 1392   1392 	symbol_b "Telsendpr",6,0,1
+                                 +0 1393   1393 	symbol_b "Telsendpr",1,442,1
+                                 +0 1394   1394 	symbol_a "",51,0,0
+                                 +0 1395   1395 	line "",447,48,0
+000001C3  0C00                 R +0 1396   1396 	ld	A,(_FLAG0)
+000001C5  6490                   +0 1397   1397 	and	A,0x90
+000001C7  D92A                   +0 1398   1398 	j	ne,L29
+                                 +0 1399   1399 	line "",449,41,0
+000001C9  5800                 R +0 1400   1400 	test	(_FLAG0).0
+000001CB  DF26                   +0 1401   1401 	j	f,L29
+                                 +0 1402   1402 	line "",455,56,0
+000001CD  5D00                 R +0 1403   1403 	test	(_FLAG0).5
+000001CF  DE11                   +0 1404   1404 	j	t,L32
+                                 +0 1405   1405 	line "",457,101,0
+000001D1  0C00                 R +0 1406   1406 	ld	A,(_R_telsendbuffa)
+000001D3  6480                   +0 1407   1407 	and	A,0x80
+000001D5  0E00                 R +0 1408   1408 	ld	(_R_telsendbuffb),A
+                                 +0 1409   1409 	line "",459,94,0
+000001D7  0C00                 R +0 1410   1410 	ld	A,(_R_telsendbuffa + 0x1)
+000001D9  0E00                 R +0 1411   1411 	ld	(_R_telsendbuffb + 0x1),A
+                                 +0 1412   1412 	line "",462,71,0
+000001DB  CD00                 R +0 1413   1413 	clr	(_FLAG0).5
+                                 +0 1414   1414 	line "",465,80,0
+000001DD  E0006480             R +0 1415   1415 	and	(_R_telsendbuffa),0x80
+000001E1  FA                     +0 1416   1416 	ret
+000001E2                         +0 1417   1417 L32:
+                                 +0 1418   1418 	line "",469,74,0
+000001E2  FD0000               R +0 1419   1419 	cal	_pre_telsenddate
+                                 +0 1420   1420 	line "",470,73,0
+000001E5  5E00                 R +0 1421   1421 	test	(_FLAG0).6
+000001E7  8A                     +0 1422   1422 	j	t,L29
+                                 +0 1423   1423 	line "",472,117,0
+000001E8  1888                   +0 1424   1424 	ld	A,0x88
+000001EA  E00003               R +0 1425   1425 	sub	A,(_R_telsendbuffa)
+000001ED  0E00                 R +0 1426   1426 	ld	(_R_telsendbuffa + 0x1),A
+                                 +0 1427   1427 	line "",473,88,0
+000001EF  C000                 R +0 1428   1428 	set	(_FLAG0).0
+                                 +0 1429   1429 	line "",474,89,0
+000001F1  CC00                 R +0 1430   1430 	clr	(_FLAG0).4
+000001F3                         +0 1431   1431 L29:
+                                 +0 1432   1432 	line "",479,1,0
+000001F3  FA                     +0 1433   1433 	ret
+                                 +0 1434   1434 	symbol_b "Telsendpr",2,479,1
+                                 +0 1435   1435 	symbol_b "Delayus",5,0,1
+                                 +0 1436   1436 	symbol_t 212,xc,"Delayus",1,1,"delaytime",7,0
+                                 +0 1437   1437 	symbol_n "Delayus",212,4,1
+                                 +0 1438   1438 	symbol_a "Delayus",8,0,0
+                                 +0 1439   1439 	line "",482,1,0
+                                 +0 1440   1440 	public _Delayus
+000001F4                         +0 1441   1441 _Delayus:
+                                 +0 1442   1442 	symbol_n "i",7,1,1
+                                 +0 1443   1443 	symbol_a "Delayus",6,192,0
+                                 +0 1444   1444 	symbol_a "delaytime",2,11,0
+                                 +0 1445   1445 	symbol_a "delaytime",7,9,0
+                                 +0 1446   1446 	symbol_a "Delayus",0,2,0
+                                 +0 1447   1447 	symbol_a "i",1, 3,1
+                                 +0 1448   1448 	symbol_b "Delayus",6,0,1
+                                 +0 1449   1449 	symbol_b "Delayus",1,482,1
+000001F4  52                     +0 1450   1450 	push	DE
+000001F5  53                     +0 1451   1451 	push	HL
+                                 +0 1452   1452 	symbol_a "",51,0,0
+                                 +0 1453   1453 	line "",485,16,0
+000001F6  E885                   +0 1454   1454 	xor	WA,WA
+000001F8  560368                 +0 1455   1455 	ld	(SP+0x3),WA
+                                 +0 1456   1456 	line "",482,1,0
+                                 +0 1457   1457 	symbol_a "",9,9,11
+000001FB  D6074B                 +0 1458   1458 	ld	HL,(SP+0x7)
+                                 +0 1459   1459 	line "",485,16,0
+000001FE  EB6F0000               +0 1460   1460 	cmp	HL,0x0
+00000202  DC0D                   +0 1461   1461 	j	le,L35
+00000204                         +0 1462   1462 L36:
+                                 +0 1463   1463 	line "",487,37,0
+00000204  00                     +0 1464   1464 NOP
+                                 +0 1465   1465 	line "",485,32,0
+00000205  D60348                 +0 1466   1466 	ld	WA,(SP+0x3)
+00000208  30                     +0 1467   1467 	inc	WA
+00000209  560368                 +0 1468   1468 	ld	(SP+0x3),WA
+                                 +0 1469   1469 	line "",485,28,0
+0000020C  D6039F                 +0 1470   1470 	cmp	HL,(SP+0x3)
+0000020F  DDF3                   +0 1471   1471 	j	gt,L36
+                                 +0 1472   1472 	symbol_a "",9,0,11
+00000211                         +0 1473   1473 L35:
+                                 +0 1474   1474 	symbol_a "",51,-1,0
+                                 +0 1475   1475 	line "",489,1,0
+00000211  D3                     +0 1476   1476 	pop	HL
+00000212  D2                     +0 1477   1477 	pop	DE
+00000213  FA                     +0 1478   1478 	ret
+                                 +0 1479   1479 	symbol_a "",51,0,0
+                                 +0 1480   1480 	symbol_b "Delayus",2,489,1
+                                 +0 1481   1481 	symbol_b "Telsendsub",5,0,1
+                                 +0 1482   1482 	symbol_t 213,xc,"Telsendsub",1,0
+                                 +0 1483   1483 	symbol_n "Telsendsub",213,4,1
+                                 +0 1484   1484 	symbol_a "Telsendsub",8,0,0
+                                 +0 1485   1485 	line "",494,1,0
+                                 +0 1486   1486 	public _Telsendsub
+00000214                         +0 1487   1487 _Telsendsub:
+                                 +0 1488   1488 	symbol_n "w",3,1,1
+                                 +0 1489   1489 	symbol_n "j",3,1,1
+                                 +0 1490   1490 	symbol_n "m",7,1,1
+                                 +0 1491   1491 	symbol_n "R_telsendcounter",3,1,1
+                                 +0 1492   1492 	symbol_t 10028,nv,83,0
+                                 +0 1493   1493 	symbol_t 10029,O,10028,1
+                                 +0 1494   1494 	symbol_t 10030,nv,69,0
+                                 +0 1495   1495 	symbol_t 10031,O,10030,1
+                                 +0 1496   1496 	symbol_t 10032,nv,69,0
+                                 +0 1497   1497 	symbol_t 10033,O,10032,1
+                                 +0 1498   1498 	symbol_t 10034,nv,69,0
+                                 +0 1499   1499 	symbol_t 10035,O,10034,1
+                                 +0 1500   1500 	symbol_t 10036,nv,69,0
+                                 +0 1501   1501 	symbol_t 10037,O,10036,1
+                                 +0 1502   1502 	symbol_t 10038,nv,69,0
+                                 +0 1503   1503 	symbol_t 10039,O,10038,1
+                                 +0 1504   1504 	symbol_t 10040,nv,69,0
+                                 +0 1505   1505 	symbol_t 10041,O,10040,1
+                                 +0 1506   1506 	symbol_t 10042,nv,69,0
+                                 +0 1507   1507 	symbol_t 10043,O,10042,1
+                                 +0 1508   1508 	symbol_t 10044,nv,79,0
+                                 +0 1509   1509 	symbol_t 10045,O,10044,1
+                                 +0 1510   1510 	symbol_t 10046,nv,69,0
+                                 +0 1511   1511 	symbol_t 10047,O,10046,1
+                                 +0 1512   1512 	symbol_t 10048,nv,69,0
+                                 +0 1513   1513 	symbol_t 10049,O,10048,1
+                                 +0 1514   1514 	symbol_a "Telsendsub",6,192,0
+                                 +0 1515   1515 	symbol_a "w",2,7,1
+                                 +0 1516   1516 	symbol_a "w",7,1,1
+                                 +0 1517   1517 	symbol_a "j",2,6,1
+                                 +0 1518   1518 	symbol_a "j",7,2,1
+                                 +0 1519   1519 	symbol_a "m",2,8,1
+                                 +0 1520   1520 	symbol_a "m",7,3,1
+                                 +0 1521   1521 	symbol_a "Telsendsub",0,1,0
+                                 +0 1522   1522 	symbol_a "R_telsendcounter",1, 3,1
+                                 +0 1523   1523 	symbol_b "Telsendsub",6,0,1
+                                 +0 1524   1524 	symbol_b "Telsendsub",1,494,1
+00000214  3E                     +0 1525   1525 	dec	SP
+00000215  53                     +0 1526   1526 	push	HL
+                                 +0 1527   1527 	symbol_a "",51,0,0
+                                 +0 1528   1528 	line "",499,26,0
+00000216  5800                 R +0 1529   1529 	test	(_FLAG0).0
+00000218  A4                     +0 1530   1530 	j	f,L37
+                                 +0 1531   1531 	line "",501,34,0
+00000219  C500                   +0 1532   1532 	set	(_P0DR).5
+0000021B  FE0000               R +0 1533   1533 	j	L50000
+0000021E                         +0 1534   1534 L37:
+                                 +0 1535   1535 	line "",505,36,0
+0000021E  C83A                   +0 1536   1536 DI
+                                 +0 1537   1537 	line "",507,66,0
+00000220  5C00                 R +0 1538   1538 	test	(_FLAG0).4
+00000222  DF28                   +0 1539   1539 	j	f,L40
+00000224  070000               R +0 1540   1540 	cmp	(_R_telsendtimer),0x0
+00000227  DF23                   +0 1541   1541 	j	f,L40
+                                 +0 1542   1542 	line "",509,57,0
+00000229  C400                 R +0 1543   1543 	set	(_FLAG0).4
+                                 +0 1544   1544 	line "",510,59,0
+0000022B  5603F900               +0 1545   1545 	ld	(SP+0x3),0x0
+                                 +0 1546   1546 	line "",511,50,0
+0000022F  CD00                   +0 1547   1547 	clr	(_P0DR).5
+                                 +0 1548   1548 	line "",513,52,0
+00000231  481500                 +0 1549   1549 	ld	WA,0x15
+00000234  50                     +0 1550   1550 	push	WA
+                                 +0 1551   1551 	symbol_a "",51,2,0
+00000235  FD0000               R +0 1552   1552 	cal	_Delayus
+                                 +0 1553   1553 	line "",514,50,0
+00000238  C500                   +0 1554   1554 	set	(_P0DR).5
+                                 +0 1555   1555 	line "",515,52,0
+0000023A  480A00                 +0 1556   1556 	ld	WA,0xa
+0000023D  50                     +0 1557   1557 	push	WA
+                                 +0 1558   1558 	symbol_a "",51,4,0
+0000023E  FD0000               R +0 1559   1559 	cal	_Delayus
+                                 +0 1560   1560 	line "",516,50,0
+00000241  CD00                   +0 1561   1561 	clr	(_P0DR).5
+                                 +0 1562   1562 	line "",517,51,0
+00000243  480800                 +0 1563   1563 	ld	WA,0x8
+00000246  50                     +0 1564   1564 	push	WA
+                                 +0 1565   1565 	symbol_a "",51,6,0
+00000247  FD0000               R +0 1566   1566 	cal	_Delayus
+0000024A  3706                   +0 1567   1567 	ld	SP,SP+0x6
+                                 +0 1568   1568 	symbol_a "",51,0,0
+0000024C                         +0 1569   1569 L40:
+                                 +0 1570   1570 	line "",524,42,0
+0000024C  5C00                 R +0 1571   1571 	test	(_FLAG0).4
+0000024E  A2FE0000             R +0 1572   1572 	j	t,L41
+                                 +0 1573   1573 	line "",526,48,0
+                                 +0 1574   1574 	symbol_a "",9,1,7
+00000252  EE35                   +0 1575   1575 	xor	L,L
+00000254                         +0 1576   1576 L43:
+                                 +0 1577   1577 	line "",528,89,0
+00000254  EE44                   +0 1578   1578 	ld	E,L
+00000256  1D00                   +0 1579   1579 	ld	D,0x0
+00000258  EA690000             R +0 1580   1580 	add	DE,_R_telsendbuffa
+0000025C  E240                   +0 1581   1581 	ld	A,(DE)
+0000025E  0E00                 R +0 1582   1582 	ld	(_R_telsendbufft),A
+                                 +0 1583   1583 	line "",529,64,0
+                                 +0 1584   1584 	symbol_a "",9,2,6
+00000260  EF3D                   +0 1585   1585 	xor	H,H
+00000262                         +0 1586   1586 L45:
+                                 +0 1587   1587 	line "",531,103,0
+00000262  5800                 R +0 1588   1588 	test	(_R_telsendbufft).0
+00000264  DF13                   +0 1589   1589 	j	f,L46
+                                 +0 1590   1590 	line "",533,98,0
+00000266  CD00                   +0 1591   1591 	clr	(_P0DR).5
+                                 +0 1592   1592 	line "",534,100,0
+00000268  481300                 +0 1593   1593 	ld	WA,0x13
+0000026B  50                     +0 1594   1594 	push	WA
+                                 +0 1595   1595 	symbol_a "",51,2,0
+0000026C  FD0000               R +0 1596   1596 	cal	_Delayus
+0000026F  D2                     +0 1597   1597 	pop	DE
+                                 +0 1598   1598 	symbol_a "",51,0,0
+                                 +0 1599   1599 	line "",535,101,0
+00000270  00                     +0 1600   1600 NOP
+                                 +0 1601   1601 	line "",536,101,0
+00000271  00                     +0 1602   1602 NOP
+                                 +0 1603   1603 	line "",537,101,0
+00000272  00                     +0 1604   1604 NOP
+                                 +0 1605   1605 	line "",538,101,0
+00000273  00                     +0 1606   1606 NOP
+                                 +0 1607   1607 	line "",539,101,0
+00000274  00                     +0 1608   1608 NOP
+                                 +0 1609   1609 	line "",540,101,0
+00000275  00                     +0 1610   1610 NOP
+                                 +0 1611   1611 	line "",541,101,0
+00000276  00                     +0 1612   1612 NOP
+00000277  FC11                   +0 1613   1613 	j	L47
+00000279                         +0 1614   1614 L46:
+                                 +0 1615   1615 	line "",547,98,0
+00000279  C500                   +0 1616   1616 	set	(_P0DR).5
+                                 +0 1617   1617 	line "",548,100,0
+0000027B  481300                 +0 1618   1618 	ld	WA,0x13
+0000027E  50                     +0 1619   1619 	push	WA
+                                 +0 1620   1620 	symbol_a "",51,2,0
+0000027F  FD0000               R +0 1621   1621 	cal	_Delayus
+00000282  D2                     +0 1622   1622 	pop	DE
+                                 +0 1623   1623 	symbol_a "",51,0,0
+                                 +0 1624   1624 	line "",549,101,0
+00000283  00                     +0 1625   1625 NOP
+                                 +0 1626   1626 	line "",550,101,0
+00000284  00                     +0 1627   1627 NOP
+                                 +0 1628   1628 	line "",551,101,0
+00000285  00                     +0 1629   1629 NOP
+                                 +0 1630   1630 	line "",552,101,0
+00000286  00                     +0 1631   1631 NOP
+                                 +0 1632   1632 	line "",553,101,0
+00000287  00                     +0 1633   1633 NOP
+                                 +0 1634   1634 	line "",554,101,0
+00000288  00                     +0 1635   1635 NOP
+                                 +0 1636   1636 	line "",555,101,0
+00000289  00                     +0 1637   1637 NOP
+0000028A                         +0 1638   1638 L47:
+                                 +0 1639   1639 	line "",557,105,0
+0000028A  0C00                 R +0 1640   1640 	ld	A,(_R_telsendbufft)
+0000028C  E8F5                   +0 1641   1641 	shrc	A
+0000028E  0E00                 R +0 1642   1642 	ld	(_R_telsendbufft),A
+                                 +0 1643   1643 	line "",558,91,0
+00000290  D603F0                 +0 1644   1644 	inc	(SP+0x3)
+                                 +0 1645   1645 	line "",529,72,0
+00000293  27                     +0 1646   1646 	inc	H
+                                 +0 1647   1647 	line "",529,68,0
+00000294  EF6708                 +0 1648   1648 	cmp	H,0x8
+00000297  DAC9                   +0 1649   1649 	j	lt,L45
+                                 +0 1650   1650 	line "",526,56,0
+                                 +0 1651   1651 	symbol_a "",9,0,6
+00000299  26                     +0 1652   1652 	inc	L
+                                 +0 1653   1653 	line "",526,52,0
+0000029A  EE6702                 +0 1654   1654 	cmp	L,0x2
+0000029D  DAB5                   +0 1655   1655 	j	lt,L43
+                                 +0 1656   1656 	line "",561,64,0
+                                 +0 1657   1657 	symbol_a "",9,0,7
+0000029F  D6036710               +0 1658   1658 	cmp	(SP+0x3),0x10
+000002A3  DF31                   +0 1659   1659 	j	f,L41
+                                 +0 1660   1660 	line "",563,66,0
+000002A5  C500                   +0 1661   1661 	set	(_P0DR).5
+                                 +0 1662   1662 	line "",565,64,0
+                                 +0 1663   1663 	symbol_a "",9,3,8
+000002A7  E885                   +0 1664   1664 	xor	WA,WA
+000002A9                         +0 1665   1665 L50:
+                                 +0 1666   1666 	line "",567,84,0
+000002A9  5801                   +0 1667   1667 	test	(_P1DR).0
+000002AB  86                     +0 1668   1668 	j	t,L49
+                                 +0 1669   1669 	line "",565,76,0
+000002AC  30                     +0 1670   1670 	inc	WA
+                                 +0 1671   1671 	line "",565,72,0
+000002AD  E86FD007               +0 1672   1672 	cmp	WA,0x7d0
+000002B1  DCF6                   +0 1673   1673 	j	le,L50
+000002B3                         +0 1674   1674 L49:
+                                 +0 1675   1675 	line "",571,74,0
+000002B3  0A000A               R +0 1676   1676 	ld	(_R_telsendtimer),0xa
+                                 +0 1677   1677 	line "",575,66,0
+000002B6  E86FD007               +0 1678   1678 	cmp	WA,0x7d0
+000002BA  DB0F                   +0 1679   1679 	j	ge,L52
+                                 +0 1680   1680 	line "",577,90,0
+                                 +0 1681   1681 	symbol_a "",9,0,8
+000002BC  0A0000               R +0 1682   1682 	ld	(_R_telcomcounter),0x0
+                                 +0 1683   1683 	line "",578,87,0
+000002BF  C500                 R +0 1684   1684 	set	(_FLAG0).5
+                                 +0 1685   1685 	line "",580,88,0
+000002C1  C800                 R +0 1686   1686 	clr	(_FLAG0).0
+                                 +0 1687   1687 	line "",581,88,0
+000002C3  CE00                 R +0 1688   1688 	clr	(_FLAG0).6
+                                 +0 1689   1689 	line "",582,89,0
+000002C5  CC00                 R +0 1690   1690 	clr	(_FLAG0).4
+                                 +0 1691   1691 	line "",584,82,0
+000002C7  C500                   +0 1692   1692 	set	(_P0DR).5
+000002C9  FC0B                   +0 1693   1693 	j	L41
+000002CB                         +0 1694   1694 L52:
+                                 +0 1695   1695 	line "",591,90,0
+000002CB  E000F0               R +0 1696   1696 	inc	(_R_telcomcounter)
+                                 +0 1697   1697 	line "",592,87,0
+000002CE  CD00                 R +0 1698   1698 	clr	(_FLAG0).5
+                                 +0 1699   1699 	line "",593,88,0
+000002D0  C000                 R +0 1700   1700 	set	(_FLAG0).0
+                                 +0 1701   1701 	line "",594,82,0
+000002D2  C500                   +0 1702   1702 	set	(_P0DR).5
+                                 +0 1703   1703 	line "",595,89,0
+000002D4  CC00                 R +0 1704   1704 	clr	(_FLAG0).4
+000002D6                         +0 1705   1705 L41:
+                                 +0 1706   1706 	line "",602,34,0
+000002D6  CC3C                   +0 1707   1707 	clr	(_ILL).4
+                                 +0 1708   1708 	line "",603,36,0
+000002D8  C03A                   +0 1709   1709 EI
+000002DA                         +0 1710   1710 L50000:
+                                 +0 1711   1711 	symbol_a "",51,-1,0
+                                 +0 1712   1712 	line "",605,1,0
+000002DA  D3                     +0 1713   1713 	pop	HL
+000002DB  36                     +0 1714   1714 	inc	SP
+000002DC  FA                     +0 1715   1715 	ret
+                                 +0 1716   1716 	symbol_a "",51,0,0
+                                 +0 1717   1717 	symbol_b "Telsendsub",2,605,1
+                                 +0 1718   1718 	symbol_b "Telrecepr",5,0,1
+                                 +0 1719   1719 	symbol_t 214,xc,"Telrecepr",1,0
+                                 +0 1720   1720 	symbol_n "Telrecepr",214,4,1
+                                 +0 1721   1721 	symbol_a "Telrecepr",8,0,0
+                                 +0 1722   1722 	line "",609,1,0
+                                 +0 1723   1723 	public _Telrecepr
+000002DD                         +0 1724   1724 _Telrecepr:
+                                 +0 1725   1725 	symbol_n "i",3,1,1
+                                 +0 1726   1726 	symbol_a "Telrecepr",6,0,0
+                                 +0 1727   1727 	symbol_a "Telrecepr",0,0,0
+                                 +0 1728   1728 	symbol_b "Telrecepr",6,0,1
+                                 +0 1729   1729 	symbol_b "Telrecepr",1,609,1
+                                 +0 1730   1730 	symbol_a "",51,0,0
+                                 +0 1731   1731 	line "",613,24,0
+000002DD  5800                 R +0 1732   1732 	test	(_FLAG1).0
+000002DF  DE5D                   +0 1733   1733 	j	t,L54
+                                 +0 1734   1734 	line "",615,39,0
+000002E1  C800                 R +0 1735   1735 	clr	(_FLAG1).0
+                                 +0 1736   1736 	line "",617,37,0
+000002E3  5900                 R +0 1737   1737 	test	(_FLAG1).1
+000002E5  DF2B                   +0 1738   1738 	j	f,L55
+                                 +0 1739   1739 	line "",619,73,0
+000002E7  0C00                 R +0 1740   1740 	ld	A,(_R_telrecebuff)
+000002E9  6403                   +0 1741   1741 	and	A,0x3
+000002EB  6702                   +0 1742   1742 	cmp	A,0x2
+000002ED  AD                     +0 1743   1743 	j	f,L56
+                                 +0 1744   1744 	line "",621,67,0
+000002EE  C100                 R +0 1745   1745 	set	(_FLAG1).1
+                                 +0 1746   1746 	line "",623,71,0
+000002F0  C300                 R +0 1747   1747 	set	(_FLAG1).3
+                                 +0 1748   1748 	line "",625,75,0
+000002F2  0A001E               R +0 1749   1749 	ld	(_R_longringtimer),0x1e
+                                 +0 1750   1750 	line "",626,71,0
+000002F5  0A0000               R +0 1751   1751 	ld	(_R_pswcounter),0x0
+                                 +0 1752   1752 	line "",627,71,0
+000002F8  C200                 R +0 1753   1753 	set	(_FLAG0).2
+000002FA  FC16                   +0 1754   1754 	j	L55
+000002FC                         +0 1755   1755 L56:
+                                 +0 1756   1756 	line "",632,73,0
+000002FC  0C00                 R +0 1757   1757 	ld	A,(_R_telrecebuff)
+000002FE  6403                   +0 1758   1758 	and	A,0x3
+00000300  6701                   +0 1759   1759 	cmp	A,0x1
+00000302  AE                     +0 1760   1760 	j	f,L55
+                                 +0 1761   1761 	line "",634,67,0
+00000303  C900                 R +0 1762   1762 	clr	(_FLAG1).1
+                                 +0 1763   1763 	line "",635,71,0
+00000305  E000F0               R +0 1764   1764 	inc	(_R_pswcounter)
+                                 +0 1765   1765 	line "",637,76,0
+00000308  0A000A               R +0 1766   1766 	ld	(_R_shortringtimer),0xa
+                                 +0 1767   1767 	line "",639,71,0
+0000030B  CA00                 R +0 1768   1768 	clr	(_FLAG0).2
+                                 +0 1769   1769 	line "",641,72,0
+0000030D  C400                 R +0 1770   1770 	set	(_FLAG1).4
+                                 +0 1771   1771 	line "",650,68,0
+0000030F  0A0000               R +0 1772   1772 	ld	(_R_pointer),0x0
+00000312                         +0 1773   1773 L55:
+                                 +0 1774   1774 	line "",657,43,0
+00000312  5A00                 R +0 1775   1775 	test	(_FLAG1).2
+00000314  DF25                   +0 1776   1776 	j	f,L59
+                                 +0 1777   1777 	line "",659,73,0
+00000316  0C00                 R +0 1778   1778 	ld	A,(_R_telrecebuff)
+00000318  640C                   +0 1779   1779 	and	A,0xc
+0000031A  6708                   +0 1780   1780 	cmp	A,0x8
+0000031C  AA                     +0 1781   1781 	j	f,L60
+                                 +0 1782   1782 	line "",661,73,0
+0000031D  C200                 R +0 1783   1783 	set	(_FLAG1).2
+                                 +0 1784   1784 	line "",662,71,0
+0000031F  C300                 R +0 1785   1785 	set	(_FLAG1).3
+                                 +0 1786   1786 	line "",663,71,0
+00000321  C200                 R +0 1787   1787 	set	(_FLAG0).2
+                                 +0 1788   1788 	line "",664,75,0
+00000323  0A001E               R +0 1789   1789 	ld	(_R_longringtimer),0x1e
+00000326  FC13                   +0 1790   1790 	j	L59
+00000328                         +0 1791   1791 L60:
+                                 +0 1792   1792 	line "",667,73,0
+00000328  0C00                 R +0 1793   1793 	ld	A,(_R_telrecebuff)
+0000032A  640C                   +0 1794   1794 	and	A,0xc
+0000032C  6704                   +0 1795   1795 	cmp	A,0x4
+0000032E  AB                     +0 1796   1796 	j	f,L59
+                                 +0 1797   1797 	line "",669,73,0
+0000032F  CA00                 R +0 1798   1798 	clr	(_FLAG1).2
+                                 +0 1799   1799 	line "",671,76,0
+00000331  0A000A               R +0 1800   1800 	ld	(_R_shortringtimer),0xa
+                                 +0 1801   1801 	line "",673,71,0
+00000334  CA00                 R +0 1802   1802 	clr	(_FLAG0).2
+                                 +0 1803   1803 	line "",675,72,0
+00000336  C400                 R +0 1804   1804 	set	(_FLAG1).4
+                                 +0 1805   1805 	line "",684,68,0
+00000338  0A0000               R +0 1806   1806 	ld	(_R_pointer),0x0
+0000033B                         +0 1807   1807 L59:
+                                 +0 1808   1808 	line "",690,43,0
+0000033B  0A0000               R +0 1809   1809 	ld	(_R_telrecebuff),0x0
+0000033E                         +0 1810   1810 L54:
+                                 +0 1811   1811 	line "",692,1,0
+0000033E  FA                     +0 1812   1812 	ret
+                                 +0 1813   1813 	symbol_b "Telrecepr",2,692,1
+                                 +0 1814   1814 	symbol_b "Recesub",5,0,1
+                                 +0 1815   1815 	symbol_t 215,xc,"Recesub",1,0
+                                 +0 1816   1816 	symbol_n "Recesub",215,4,1
+                                 +0 1817   1817 	symbol_a "Recesub",8,0,0
+                                 +0 1818   1818 	line "",695,1,0
+                                 +0 1819   1819 	public _Recesub
+0000033F                         +0 1820   1820 _Recesub:
+                                 +0 1821   1821 	symbol_n "k",7,1,1
+                                 +0 1822   1822 	symbol_n "w",3,1,1
+                                 +0 1823   1823 	symbol_n "j",3,1,1
+                                 +0 1824   1824 	symbol_n "m",3,1,1
+                                 +0 1825   1825 	symbol_n "R_telreceph",3,1,1
+                                 +0 1826   1826 	symbol_t 10050,nv,83,0
+                                 +0 1827   1827 	symbol_t 10051,O,10050,1
+                                 +0 1828   1828 	symbol_t 10052,nv,79,0
+                                 +0 1829   1829 	symbol_t 10053,O,10052,1
+                                 +0 1830   1830 	symbol_t 10054,nv,79,0
+                                 +0 1831   1831 	symbol_t 10055,O,10054,1
+                                 +0 1832   1832 	symbol_t 10056,nv,79,0
+                                 +0 1833   1833 	symbol_t 10057,O,10056,1
+                                 +0 1834   1834 	symbol_t 10058,nv,69,0
+                                 +0 1835   1835 	symbol_t 10059,O,10058,1
+                                 +0 1836   1836 	symbol_t 10060,nv,69,0
+                                 +0 1837   1837 	symbol_t 10061,O,10060,1
+                                 +0 1838   1838 	symbol_t 10062,nv,69,0
+                                 +0 1839   1839 	symbol_t 10063,O,10062,1
+                                 +0 1840   1840 	symbol_a "Recesub",6,192,0
+                                 +0 1841   1841 	symbol_a "k",2,8,1
+                                 +0 1842   1842 	symbol_a "k",7,1,1
+                                 +0 1843   1843 	symbol_a "w",2,7,1
+                                 +0 1844   1844 	symbol_a "w",7,2,1
+                                 +0 1845   1845 	symbol_a "Recesub",0,0,0
+                                 +0 1846   1846 	symbol_b "Recesub",6,0,1
+                                 +0 1847   1847 	symbol_b "Recesub",1,695,1
+0000033F  53                     +0 1848   1848 	push	HL
+                                 +0 1849   1849 	symbol_a "",51,0,0
+                                 +0 1850   1850 	line "",700,46,0
+00000340  0C00                 R +0 1851   1851 	ld	A,(_FLAG1)
+00000342  E858                   +0 1852   1852 	test	A.0
+00000344  82FE0000             R +0 1853   1853 	j	f,L64
+00000348  0C00                 R +0 1854   1854 	ld	A,(_FLAG0)
+0000034A  E85C                   +0 1855   1855 	test	A.4
+0000034C  82FE0000             R +0 1856   1856 	j	f,L64
+                                 +0 1857   1857 	line "",702,43,0
+00000350  5F00                 R +0 1858   1858 	test	(_FLAG0).7
+00000352  AA                     +0 1859   1859 	j	f,L65
+                                 +0 1860   1860 	line "",704,57,0
+00000353  C700                 R +0 1861   1861 	set	(_FLAG0).7
+                                 +0 1862   1862 	line "",705,59,0
+00000355  0A0000               R +0 1863   1863 	ld	(_R_telrececounter),0x0
+                                 +0 1864   1864 	line "",707,59,0
+00000358  0A0000               R +0 1865   1865 	ld	(_R_telrecebuffadd),0x0
+                                 +0 1866   1866 	line "",708,57,0
+0000035B  0A0000               R +0 1867   1867 	ld	(_R_telrecebufft),0x0
+0000035E                         +0 1868   1868 L65:
+                                 +0 1869   1869 	line "",711,42,0
+0000035E  5F00                 R +0 1870   1870 	test	(_FLAG0).7
+00000360  A2FE0000             R +0 1871   1871 	j	t,L64
+                                 +0 1872   1872 	line "",713,52,0
+00000364  481C00                 +0 1873   1873 	ld	WA,0x1c
+00000367  50                     +0 1874   1874 	push	WA
+                                 +0 1875   1875 	symbol_a "",51,2,0
+00000368  FD0000               R +0 1876   1876 	cal	_Delayus
+0000036B  D2                     +0 1877   1877 	pop	DE
+                                 +0 1878   1878 	symbol_a "",51,0,0
+                                 +0 1879   1879 	line "",715,48,0
+                                 +0 1880   1880 	symbol_a "",9,1,8
+0000036C  E885                   +0 1881   1881 	xor	WA,WA
+0000036E                         +0 1882   1882 L68:
+                                 +0 1883   1883 	line "",717,68,0
+0000036E  5801                   +0 1884   1884 	test	(_P1DR).0
+00000370  86                     +0 1885   1885 	j	t,L67
+                                 +0 1886   1886 	line "",715,59,0
+00000371  30                     +0 1887   1887 	inc	WA
+                                 +0 1888   1888 	line "",715,55,0
+00000372  E86FD007               +0 1889   1889 	cmp	WA,0x7d0
+00000376  DAF6                   +0 1890   1890 	j	lt,L68
+00000378                         +0 1891   1891 L67:
+                                 +0 1892   1892 	line "",720,50,0
+00000378  E86FDC05               +0 1893   1893 	cmp	WA,0x5dc
+0000037C  DC07                   +0 1894   1894 	j	le,L70
+                                 +0 1895   1895 	line "",722,73,0
+                                 +0 1896   1896 	symbol_a "",9,0,8
+0000037E  CF00                 R +0 1897   1897 	clr	(_FLAG0).7
+                                 +0 1898   1898 	line "",723,71,0
+00000380  C800                 R +0 1899   1899 	clr	(_FLAG1).0
+00000382  FE0000               R +0 1900   1900 	j	L64
+00000385                         +0 1901   1901 L70:
+                                 +0 1902   1902 	line "",728,64,0
+                                 +0 1903   1903 	symbol_a "",9,2,7
+00000385  EE35                   +0 1904   1904 	xor	L,L
+00000387                         +0 1905   1905 L73:
+                                 +0 1906   1906 	line "",730,84,0
+00000387  481500                 +0 1907   1907 	ld	WA,0x15
+0000038A  50                     +0 1908   1908 	push	WA
+                                 +0 1909   1909 	symbol_a "",51,2,0
+0000038B  FD0000               R +0 1910   1910 	cal	_Delayus
+0000038E  D2                     +0 1911   1911 	pop	DE
+                                 +0 1912   1912 	symbol_a "",51,0,0
+                                 +0 1913   1913 	line "",732,91,0
+0000038F  0C00                 R +0 1914   1914 	ld	A,(_R_telrecebufft)
+00000391  E8F5                   +0 1915   1915 	shrc	A
+00000393  0E00                 R +0 1916   1916 	ld	(_R_telrecebufft),A
+                                 +0 1917   1917 	line "",733,84,0
+00000395  5801                   +0 1918   1918 	test	(_P1DR).0
+00000397  81                     +0 1919   1919 	j	t,L75
+                                 +0 1920   1920 	line "",737,109,0
+00000398  C700                 R +0 1921   1921 	set	(_R_telrecebufft).7
+0000039A                         +0 1922   1922 L75:
+                                 +0 1923   1923 	line "",740,91,0
+0000039A  E000F0               R +0 1924   1924 	inc	(_R_telrececounter)
+                                 +0 1925   1925 	line "",728,72,0
+0000039D  26                     +0 1926   1926 	inc	L
+                                 +0 1927   1927 	line "",728,68,0
+0000039E  EE6708                 +0 1928   1928 	cmp	L,0x8
+000003A1  DAE4                   +0 1929   1929 	j	lt,L73
+                                 +0 1930   1930 	line "",744,88,0
+                                 +0 1931   1931 	symbol_a "",9,0,7
+000003A3  0C00                 R +0 1932   1932 	ld	A,(_R_telrecebufft)
+000003A5  0E00                 R +0 1933   1933 	ld	(_R_telrecebuff),A
+                                 +0 1934   1934 	line "",745,89,0
+000003A7  0C00                 R +0 1935   1935 	ld	A,(_R_telrecebuffadd)
+000003A9  E00001               R +0 1936   1936 	add	A,(_R_telrecebufft)
+000003AC  0E00                 R +0 1937   1937 	ld	(_R_telrecebuffadd),A
+                                 +0 1938   1938 	line "",746,73,0
+000003AE  0A0000               R +0 1939   1939 	ld	(_R_telrecebufft),0x0
+                                 +0 1940   1940 	line "",749,64,0
+                                 +0 1941   1941 	symbol_a "",9,2,7
+000003B1  EE35                   +0 1942   1942 	xor	L,L
+000003B3                         +0 1943   1943 L77:
+                                 +0 1944   1944 	line "",751,84,0
+000003B3  481400                 +0 1945   1945 	ld	WA,0x14
+000003B6  50                     +0 1946   1946 	push	WA
+                                 +0 1947   1947 	symbol_a "",51,2,0
+000003B7  FD0000               R +0 1948   1948 	cal	_Delayus
+000003BA  D2                     +0 1949   1949 	pop	DE
+                                 +0 1950   1950 	symbol_a "",51,0,0
+                                 +0 1951   1951 	line "",753,91,0
+000003BB  0C00                 R +0 1952   1952 	ld	A,(_R_telrecebufft)
+000003BD  E8F5                   +0 1953   1953 	shrc	A
+000003BF  0E00                 R +0 1954   1954 	ld	(_R_telrecebufft),A
+                                 +0 1955   1955 	line "",754,84,0
+000003C1  5801                   +0 1956   1956 	test	(_P1DR).0
+000003C3  81                     +0 1957   1957 	j	t,L79
+                                 +0 1958   1958 	line "",758,109,0
+000003C4  C700                 R +0 1959   1959 	set	(_R_telrecebufft).7
+000003C6                         +0 1960   1960 L79:
+                                 +0 1961   1961 	line "",760,91,0
+000003C6  E000F0               R +0 1962   1962 	inc	(_R_telrececounter)
+                                 +0 1963   1963 	line "",749,72,0
+000003C9  26                     +0 1964   1964 	inc	L
+                                 +0 1965   1965 	line "",749,68,0
+000003CA  EE6708                 +0 1966   1966 	cmp	L,0x8
+000003CD  DAE4                   +0 1967   1967 	j	lt,L77
+                                 +0 1968   1968 	line "",763,88,0
+                                 +0 1969   1969 	symbol_a "",9,0,7
+000003CF  0C00                 R +0 1970   1970 	ld	A,(_R_telrecebufft)
+000003D1  0E00                 R +0 1971   1971 	ld	(_R_telrecebuff + 0x1),A
+                                 +0 1972   1972 	line "",764,89,0
+000003D3  0C00                 R +0 1973   1973 	ld	A,(_R_telrecebuffadd)
+000003D5  E00001               R +0 1974   1974 	add	A,(_R_telrecebufft)
+000003D8  0E00                 R +0 1975   1975 	ld	(_R_telrecebuffadd),A
+                                 +0 1976   1976 	line "",765,73,0
+000003DA  0A0000               R +0 1977   1977 	ld	(_R_telrecebufft),0x0
+                                 +0 1978   1978 	line "",769,80,0
+000003DD  0C00                 R +0 1979   1979 	ld	A,(_R_telrececounter)
+000003DF  6710                   +0 1980   1980 	cmp	A,0x10
+000003E1  DF24                   +0 1981   1981 	j	f,L64
+                                 +0 1982   1982 	line "",771,98,0
+000003E3  070077               R +0 1983   1983 	cmp	(_R_telrecebuffadd),0x77
+000003E6  DF16                   +0 1984   1984 	j	f,L81
+                                 +0 1985   1985 	line "",773,103,0
+000003E8  C000                 R +0 1986   1986 	set	(_FLAG1).0
+                                 +0 1987   1987 	line "",774,106,0
+000003EA  0A0000               R +0 1988   1988 	ld	(_R_dethokdetimer),0x0
+                                 +0 1989   1989 	line "",775,98,0
+000003ED  CD00                   +0 1990   1990 	clr	(_P0DR).5
+                                 +0 1991   1991 	line "",776,100,0
+000003EF  481400                 +0 1992   1992 	ld	WA,0x14
+000003F2  50                     +0 1993   1993 	push	WA
+                                 +0 1994   1994 	symbol_a "",51,2,0
+000003F3  FD0000               R +0 1995   1995 	cal	_Delayus
+000003F6  D2                     +0 1996   1996 	pop	DE
+                                 +0 1997   1997 	symbol_a "",51,0,0
+                                 +0 1998   1998 	line "",777,98,0
+000003F7  C500                   +0 1999   1999 	set	(_P0DR).5
+                                 +0 2000   2000 	line "",778,107,0
+000003F9  0A0000               R +0 2001   2001 	ld	(_R_telrececounter),0x0
+                                 +0 2002   2002 	line "",779,105,0
+000003FC  FC07                   +0 2003   2003 	j	L50001
+000003FE                         +0 2004   2004 L81:
+                                 +0 2005   2005 	line "",783,98,0
+000003FE  C500                   +0 2006   2006 	set	(_P0DR).5
+                                 +0 2007   2007 	line "",784,107,0
+00000400  0A0000               R +0 2008   2008 	ld	(_R_telrececounter),0x0
+                                 +0 2009   2009 	line "",785,103,0
+00000403  C800                 R +0 2010   2010 	clr	(_FLAG1).0
+00000405                         +0 2011   2011 L50001:
+                                 +0 2012   2012 	line "",786,105,0
+00000405  CF00                 R +0 2013   2013 	clr	(_FLAG0).7
+00000407                         +0 2014   2014 L64:
+                                 +0 2015   2015 	symbol_a "",51,-1,0
+                                 +0 2016   2016 	line "",794,1,0
+00000407  D3                     +0 2017   2017 	pop	HL
+00000408  FA                     +0 2018   2018 	ret
+                                 +0 2019   2019 	symbol_a "",51,0,0
+                                 +0 2020   2020 	symbol_b "Recesub",2,794,1
+                                 +0 2021   2021 	symbol_t 216,xi,"",1,-1
+                                 +0 2022   2022 	symbol_t 217,O,216,1
+                                 +0 2023   2023 	symbol_b "INT_INTTBTMP",5,0,1
+                                 +0 2024   2024 	symbol_t 218,xi,"INT_INTTBTMP",1,0
+                                 +0 2025   2025 	symbol_n "INT_INTTBTMP",218,4,1
+                                 +0 2026   2026 	symbol_a "INT_INTTBTMP",8,0,0
+                                 +0 2027   2027 	line "",800,1,0
+                                 +0 2028   2028 	public _INT_INTTBTMP
+00000409                         +0 2029   2029 _INT_INTTBTMP:
+                                 +0 2030   2030 	symbol_a "INT_INTTBTMP",6,0,0
+                                 +0 2031   2031 	symbol_a "INT_INTTBTMP",0,0,0
+                                 +0 2032   2032 	symbol_b "INT_INTTBTMP",6,0,1
+                                 +0 2033   2033 	symbol_b "INT_INTTBTMP",1,800,1
+                                 +0 2034   2034 	symbol_a "",51,0,0
+                                 +0 2035   2035 	line "",801,28,0
+00000409  070005               R +0 2036   2036 	cmp	(_R_40mscounter),0x5
+0000040C  DA1A                   +0 2037   2037 	j	lt,L83
+                                 +0 2038   2038 	line "",803,40,0
+0000040E  0A0000               R +0 2039   2039 	ld	(_R_40mscounter),0x0
+                                 +0 2040   2040 	line "",804,46,0
+00000411  070000               R +0 2041   2041 	cmp	(_R_longringtimer),0x0
+00000414  82                     +0 2042   2042 	j	t,L84
+                                 +0 2043   2043 	line "",804,66,0
+00000415  E000F8               R +0 2044   2044 	dec	(_R_longringtimer)
+00000418                         +0 2045   2045 L84:
+                                 +0 2046   2046 	line "",805,47,0
+00000418  070000               R +0 2047   2047 	cmp	(_R_shortringtimer),0x0
+0000041B  82                     +0 2048   2048 	j	t,L85
+                                 +0 2049   2049 	line "",805,67,0
+0000041C  E000F8               R +0 2050   2050 	dec	(_R_shortringtimer)
+0000041F                         +0 2051   2051 L85:
+                                 +0 2052   2052 	line "",806,41,0
+0000041F  070000               R +0 2053   2053 	cmp	(_R_midtimer),0x0
+00000422  87                     +0 2054   2054 	j	t,L87
+                                 +0 2055   2055 	line "",806,61,0
+00000423  E000F8               R +0 2056   2056 	dec	(_R_midtimer)
+00000426  FC03                   +0 2057   2057 	j	L87
+00000428                         +0 2058   2058 L83:
+                                 +0 2059   2059 	line "",810,40,0
+00000428  E000F0               R +0 2060   2060 	inc	(_R_40mscounter)
+0000042B                         +0 2061   2061 L87:
+                                 +0 2062   2062 	line "",813,29,0
+0000042B  E000F8               R +0 2063   2063 	dec	(_R_ringcountertimer)
+                                 +0 2064   2064 	line "",815,25,0
+0000042E  E000F8               R +0 2065   2065 	dec	(_R_telsendtimer)
+                                 +0 2066   2066 	line "",817,24,0
+00000431  E000F8               R +0 2067   2067 	dec	(_R_dethoktimer)
+                                 +0 2068   2068 	line "",819,35,0
+00000434  07007D               R +0 2069   2069 	cmp	(_R_onesecondcounter),0x7d
+00000437  DA07                   +0 2070   2070 	j	lt,L88
+                                 +0 2071   2071 	line "",821,39,0
+00000439  C300                 R +0 2072   2072 	set	(_FLAG0).3
+                                 +0 2073   2073 	line "",822,45,0
+0000043B  0A0000               R +0 2074   2074 	ld	(_R_onesecondcounter),0x0
+0000043E  FC03                   +0 2075   2075 	j	L89
+00000440                         +0 2076   2076 L88:
+                                 +0 2077   2077 	line "",826,45,0
+00000440  E000F0               R +0 2078   2078 	inc	(_R_onesecondcounter)
+00000443                         +0 2079   2079 L89:
+                                 +0 2080   2080 	line "",829,18,0
+00000443  CE3C                   +0 2081   2081 	clr	(_ILL).6
+                                 +0 2082   2082 	symbol_a "",51,-1,0
+                                 +0 2083   2083 	line "",831,1,0
+00000445  FB                     +0 2084   2084 	reti
+                                 +0 2085   2085 	symbol_a "",51,0,0
+                                 +0 2086   2086 	symbol_b "INT_INTTBTMP",2,831,1
+                                 +0 2087   2087 	symbol_b "INT_INT0MP",5,0,1
+                                 +0 2088   2088 	symbol_t 219,xi,"INT_INT0MP",1,0
+                                 +0 2089   2089 	symbol_n "INT_INT0MP",219,4,1
+                                 +0 2090   2090 	symbol_a "INT_INT0MP",8,0,0
+                                 +0 2091   2091 	line "",836,1,0
+                                 +0 2092   2092 	public _INT_INT0MP
+00000446                         +0 2093   2093 _INT_INT0MP:
+                                 +0 2094   2094 	symbol_a "INT_INT0MP",6,0,0
+                                 +0 2095   2095 	symbol_a "INT_INT0MP",0,0,0
+                                 +0 2096   2096 	symbol_b "INT_INT0MP",6,0,1
+                                 +0 2097   2097 	symbol_b "INT_INT0MP",1,836,1
+00000446  EDD8                   +0 2098   2098 	push	IY
+00000448  ECD8                   +0 2099   2099 	push	IX
+0000044A  53                     +0 2100   2100 	push	HL
+0000044B  52                     +0 2101   2101 	push	DE
+0000044C  51                     +0 2102   2102 	push	BC
+0000044D  50                     +0 2103   2103 	push	WA
+                                 +0 2104   2104 	symbol_a "",51,0,0
+                                 +0 2105   2105 	line "",838,28,0
+0000044E  C83A                   +0 2106   2106 DI
+                                 +0 2107   2107 	line "",839,26,0
+00000450  FD0000               R +0 2108   2108 	cal	_Recesub
+                                 +0 2109   2109 	line "",841,26,0
+00000453  CC3C                   +0 2110   2110 	clr	(_ILL).4
+                                 +0 2111   2111 	line "",843,28,0
+00000455  C03A                   +0 2112   2112 EI
+                                 +0 2113   2113 	symbol_a "",51,-1,0
+                                 +0 2114   2114 	line "",845,1,0
+00000457  D0                     +0 2115   2115 	pop	WA
+00000458  D1                     +0 2116   2116 	pop	BC
+00000459  D2                     +0 2117   2117 	pop	DE
+0000045A  D3                     +0 2118   2118 	pop	HL
+0000045B  ECD9                   +0 2119   2119 	pop	IX
+0000045D  EDD9                   +0 2120   2120 	pop	IY
+0000045F  FB                     +0 2121   2121 	reti
+                                 +0 2122   2122 	symbol_a "",51,0,0
+                                 +0 2123   2123 	symbol_b "INT_INT0MP",2,845,1
+                                 +0 2124   2124 	symbol_b "INT_INT4MP",5,0,1
+                                 +0 2125   2125 	symbol_t 220,xi,"INT_INT4MP",1,0
+                                 +0 2126   2126 	symbol_n "INT_INT4MP",220,4,1
+                                 +0 2127   2127 	symbol_a "INT_INT4MP",8,0,0
+                                 +0 2128   2128 	line "",849,1,0
+                                 +0 2129   2129 	public _INT_INT4MP
+00000460                         +0 2130   2130 _INT_INT4MP:
+                                 +0 2131   2131 	symbol_a "INT_INT4MP",6,0,0
+                                 +0 2132   2132 	symbol_a "INT_INT4MP",0,0,0
+                                 +0 2133   2133 	symbol_b "INT_INT4MP",6,0,1
+                                 +0 2134   2134 	symbol_b "INT_INT4MP",1,849,1
+                                 +0 2135   2135 	symbol_a "",51,0,0
+                                 +0 2136   2136 	symbol_a "",51,-1,0
+                                 +0 2137   2137 	line "",851,1,0
+00000460  FB                     +0 2138   2138 	reti
+                                 +0 2139   2139 	symbol_a "",51,0,0
+                                 +0 2140   2140 	symbol_b "INT_INT4MP",2,851,1
+                                 +0 2141   2141 	symbol_b "INT_INT5MP",5,0,1
+                                 +0 2142   2142 	symbol_t 221,xi,"INT_INT5MP",1,0
+                                 +0 2143   2143 	symbol_n "INT_INT5MP",221,4,1
+                                 +0 2144   2144 	symbol_a "INT_INT5MP",8,0,0
+                                 +0 2145   2145 	line "",854,1,0
+                                 +0 2146   2146 	public _INT_INT5MP
+00000461                         +0 2147   2147 _INT_INT5MP:
+                                 +0 2148   2148 	symbol_t 10064,nv,83,0
+                                 +0 2149   2149 	symbol_t 10065,O,10064,1
+                                 +0 2150   2150 	symbol_t 10066,nv,71,0
+                                 +0 2151   2151 	symbol_t 10067,O,10066,1
+                                 +0 2152   2152 	symbol_a "INT_INT5MP",6,0,0
+                                 +0 2153   2153 	symbol_a "INT_INT5MP",0,0,0
+                                 +0 2154   2154 	symbol_b "INT_INT5MP",6,0,1
+                                 +0 2155   2155 	symbol_b "INT_INT5MP",1,854,1
+00000461  EDD8                   +0 2156   2156 	push	IY
+00000463  ECD8                   +0 2157   2157 	push	IX
+00000465  53                     +0 2158   2158 	push	HL
+00000466  52                     +0 2159   2159 	push	DE
+00000467  51                     +0 2160   2160 	push	BC
+00000468  50                     +0 2161   2161 	push	WA
+                                 +0 2162   2162 	symbol_a "",51,0,0
+                                 +0 2163   2163 	line "",855,22,0
+00000469  5900                 R +0 2164   2164 	test	(_FLAG0).1
+0000046B  DE19                   +0 2165   2165 	j	t,L90
+                                 +0 2166   2166 	line "",859,42,0
+0000046D  0A0000               R +0 2167   2167 	ld	(_R_dethokdetimer),0x0
+                                 +0 2168   2168 	line "",862,37,0
+00000470  C400                   +0 2169   2169 	set	(_P0DR).4
+                                 +0 2170   2170 	line "",863,37,0
+00000472  00                     +0 2171   2171 NOP
+                                 +0 2172   2172 	line "",864,37,0
+00000473  00                     +0 2173   2173 NOP
+                                 +0 2174   2174 	line "",866,58,0
+00000474  E00044               R +0 2175   2175 	ld	E,(_R_pointer)
+00000477  1D00                   +0 2176   2176 	ld	D,0x0
+00000479  EA690000             R +0 2177   2177 	add	DE,_R_telremobuff
+0000047D  0C0C                   +0 2178   2178 	ld	A,(_P0PRD)
+0000047F  640F                   +0 2179   2179 	and	A,0xf
+00000481  F278                   +0 2180   2180 	ld	(DE),A
+                                 +0 2181   2181 	line "",867,36,0
+00000483  E000F0               R +0 2182   2182 	inc	(_R_pointer)
+00000486                         +0 2183   2183 L90:
+                                 +0 2184   2184 	line "",883,18,0
+00000486  CF3D                   +0 2185   2185 	clr	(_ILH).7
+                                 +0 2186   2186 	symbol_a "",51,-1,0
+                                 +0 2187   2187 	line "",885,1,0
+00000488  D0                     +0 2188   2188 	pop	WA
+00000489  D1                     +0 2189   2189 	pop	BC
+0000048A  D2                     +0 2190   2190 	pop	DE
+0000048B  D3                     +0 2191   2191 	pop	HL
+0000048C  ECD9                   +0 2192   2192 	pop	IX
+0000048E  EDD9                   +0 2193   2193 	pop	IY
+00000490  FB                     +0 2194   2194 	reti
+                                 +0 2195   2195 	symbol_a "",51,0,0
+                                 +0 2196   2196 	symbol_b "INT_INT5MP",2,885,1
+                                 +0 2197   2197 	symbol_b "INT_Dummy",5,0,1
+                                 +0 2198   2198 	symbol_t 222,xi,"INT_Dummy",1,0
+                                 +0 2199   2199 	symbol_n "INT_Dummy",222,4,1
+                                 +0 2200   2200 	symbol_a "INT_Dummy",8,0,0
+                                 +0 2201   2201 	line "",889,1,0
+                                 +0 2202   2202 	public _INT_Dummy
+00000491                         +0 2203   2203 _INT_Dummy:
+                                 +0 2204   2204 	symbol_a "INT_Dummy",6,0,0
+                                 +0 2205   2205 	symbol_a "INT_Dummy",0,0,0
+                                 +0 2206   2206 	symbol_b "INT_Dummy",6,0,1
+                                 +0 2207   2207 	symbol_b "INT_Dummy",1,889,1
+                                 +0 2208   2208 	symbol_a "",51,0,0
+                                 +0 2209   2209 	symbol_a "",51,-1,0
+                                 +0 2210   2210 	line "",891,1,0
+00000491  FB                     +0 2211   2211 	reti
+                                 +0 2212   2212 	symbol_a "",51,0,0
+                                 +0 2213   2213 	symbol_b "INT_Dummy",2,891,1
+                                 +0 2214   2214 	symbol_b "INT_Dummyn",5,0,1
+                                 +0 2215   2215 	symbol_t 223,xi,"INT_Dummyn",1,0
+                                 +0 2216   2216 	symbol_n "INT_Dummyn",223,4,1
+                                 +0 2217   2217 	symbol_a "INT_Dummyn",8,0,0
+                                 +0 2218   2218 	line "",894,1,0
+                                 +0 2219   2219 	public _INT_Dummyn
+00000492                         +0 2220   2220 _INT_Dummyn:
+                                 +0 2221   2221 	symbol_a "INT_Dummyn",6,0,0
+                                 +0 2222   2222 	symbol_a "INT_Dummyn",0,0,0
+                                 +0 2223   2223 	symbol_b "INT_Dummyn",6,0,1
+                                 +0 2224   2224 	symbol_b "INT_Dummyn",1,894,1
+                                 +0 2225   2225 	symbol_a "",51,0,0
+                                 +0 2226   2226 	symbol_a "",51,-1,0
+                                 +0 2227   2227 	line "",896,1,0
+00000492  FB                     +0 2228   2228 	reti
+                                 +0 2229   2229 	symbol_a "",51,0,0
+                                 +0 2230   2230 	symbol_b "INT_Dummyn",2,896,1
+                                 +0 2231   2231 INT_Vector	section romdata abs=0xffe0
+                                 +0 2232   2232 	symbol_t 224,nc,33,0
+                                 +0 2233   2233 	symbol_t 225,O,224,1
+                                 +0 2234   2234 	symbol_t 226,Z,"",224,1,"",-1,0
+                                 +0 2235   2235 	symbol_t 227,O,226,1
+                                 +0 2236   2236 	symbol_t 228,O,33,1
+                                 +0 2237   2237 	symbol_t 229,Z,"",224,1,"",16,0
+                                 +0 2238   2238 	symbol_t 230,O,229,1
+                                 +0 2239   2239 	symbol_n "TBL_INT",229,4,0
+                                 +0 2240   2240 	symbol_a "TBL_INT",8,0,0
+                                 +0 2241   2241 	public _TBL_INT
+0000FFE0                         +0 2242   2242 _TBL_INT:
+0000FFE0  00000000000000000000 R +0 2243   2243 	dw _INT_INT5MP,_INT_Dummy,_INT_Dummy,_INT_Dummy,_INT_Dummy,_INT_Dummy,_INT_Dummy,_INT_Dummy
+          000000000000                          
+0000FFF0                         +0 2244   2244 	align 1
+0000FFF0  00000000000000000000 R +0 2245   2245 	dw _INT_Dummy,_INT_INTTBTMP,_INT_Dummy,_INT_INT0MP,_INT_Dummyn,_INT_Dummyn,_INT_Dummyn,_startup
+          000000000000                          
+                                 +0 2246   2246 t_area section data small align=1,1
+                                 +0 2247   2247 	symbol_a "FLAG0",8,0,0
+                                 +0 2248   2248 	public _FLAG0
+00000000                         +0 2249   2249 _FLAG0:
+00000000                         +0 2250   2250 	dsb 1
+                                 +0 2251   2251 	symbol_a "FLAG1",8,0,0
+                                 +0 2252   2252 	public _FLAG1
+00000001                         +0 2253   2253 _FLAG1:
+00000001                         +0 2254   2254 	dsb 1
+                                 +0 2255   2255 	symbol_a "FLAG2",8,0,0
+                                 +0 2256   2256 	public _FLAG2
+00000002                         +0 2257   2257 _FLAG2:
+00000002                         +0 2258   2258 	dsb 1
+                                 +0 2259   2259 	symbol_a "FLAG3",8,0,0
+                                 +0 2260   2260 	public _FLAG3
+00000003                         +0 2261   2261 _FLAG3:
+00000003                         +0 2262   2262 	dsb 1
+                                 +0 2263   2263 	symbol_a "FLAG4",8,0,0
+                                 +0 2264   2264 	public _FLAG4
+00000004                         +0 2265   2265 _FLAG4:
+00000004                         +0 2266   2266 	dsb 1
+                                 +0 2267   2267 	symbol_a "FLAG5",8,0,0
+                                 +0 2268   2268 	public _FLAG5
+00000005                         +0 2269   2269 _FLAG5:
+00000005                         +0 2270   2270 	dsb 1
+                                 +0 2271   2271 	symbol_a "FLAG6",8,0,0
+                                 +0 2272   2272 	public _FLAG6
+00000006                         +0 2273   2273 _FLAG6:
+00000006                         +0 2274   2274 	dsb 1
+                                 +0 2275   2275 	symbol_a "ERROCODE",8,0,0
+                                 +0 2276   2276 	public _ERROCODE
+00000007                         +0 2277   2277 _ERROCODE:
+00000007                         +0 2278   2278 	dsb 1
+                                 +0 2279   2279 	symbol_a "FLAGX",8,0,0
+                                 +0 2280   2280 	public _FLAGX
+00000008                         +0 2281   2281 _FLAGX:
+00000008                         +0 2282   2282 	dsb 1
+                                 +0 2283   2283 	symbol_a "FLAGY",8,0,0
+                                 +0 2284   2284 	public _FLAGY
+00000009                         +0 2285   2285 _FLAGY:
+00000009                         +0 2286   2286 	dsb 1
+                                 +0 2287   2287 	symbol_a "FLAGI",8,0,0
+                                 +0 2288   2288 	public _FLAGI
+0000000A                         +0 2289   2289 _FLAGI:
+0000000A                         +0 2290   2290 	dsb 1
+                                 +0 2291   2291 	symbol_a "R_ringcounter",8,0,0
+                                 +0 2292   2292 	public _R_ringcounter
+0000000B                         +0 2293   2293 _R_ringcounter:
+0000000B                         +0 2294   2294 	dsb 1
+                                 +0 2295   2295 	symbol_a "R_telrecebuff",8,0,0
+                                 +0 2296   2296 	public _R_telrecebuff
+0000000C                         +0 2297   2297 _R_telrecebuff:
+0000000C                         +0 2298   2298 	dsb 2
+                                 +0 2299   2299 	symbol_a "R_telremobuff",8,0,0
+                                 +0 2300   2300 	public _R_telremobuff
+0000000E                         +0 2301   2301 _R_telremobuff:
+0000000E                         +0 2302   2302 	dsb 8
+                                 +0 2303   2303 	symbol_a "R_longringtimer",8,0,0
+                                 +0 2304   2304 	public _R_longringtimer
+00000016                         +0 2305   2305 _R_longringtimer:
+00000016                         +0 2306   2306 	dsb 1
+                                 +0 2307   2307 	symbol_a "R_40mscounter",8,0,0
+                                 +0 2308   2308 	public _R_40mscounter
+00000017                         +0 2309   2309 _R_40mscounter:
+00000017                         +0 2310   2310 	dsb 1
+                                 +0 2311   2311 	symbol_a "R_onesecondcounter",8,0,0
+                                 +0 2312   2312 	public _R_onesecondcounter
+00000018                         +0 2313   2313 _R_onesecondcounter:
+00000018                         +0 2314   2314 	dsb 1
+                                 +0 2315   2315 	symbol_a "R_dethoktimer",8,0,0
+                                 +0 2316   2316 	public _R_dethoktimer
+00000019                         +0 2317   2317 _R_dethoktimer:
+00000019                         +0 2318   2318 	dsb 1
+                                 +0 2319   2319 	symbol_a "R_p3ioback",8,0,0
+                                 +0 2320   2320 	public _R_p3ioback
+0000001A                         +0 2321   2321 _R_p3ioback:
+0000001A                         +0 2322   2322 	dsb 1
+                                 +0 2323   2323 	symbol_a "R_telsendbuffa",8,0,0
+                                 +0 2324   2324 	public _R_telsendbuffa
+0000001B                         +0 2325   2325 _R_telsendbuffa:
+0000001B                         +0 2326   2326 	dsb 2
+                                 +0 2327   2327 	symbol_a "R_telsendbuffb",8,0,0
+                                 +0 2328   2328 	public _R_telsendbuffb
+0000001D                         +0 2329   2329 _R_telsendbuffb:
+0000001D                         +0 2330   2330 	dsb 2
+                                 +0 2331   2331 	symbol_a "R_tc1crback",8,0,0
+                                 +0 2332   2332 	public _R_tc1crback
+0000001F                         +0 2333   2333 _R_tc1crback:
+0000001F                         +0 2334   2334 	dsb 1
+                                 +0 2335   2335 	symbol_a "R_telsendtimer",8,0,0
+                                 +0 2336   2336 	public _R_telsendtimer
+00000020                         +0 2337   2337 _R_telsendtimer:
+00000020                         +0 2338   2338 	dsb 1
+                                 +0 2339   2339 	symbol_a "R_telsendbufft",8,0,0
+                                 +0 2340   2340 	public _R_telsendbufft
+00000021                         +0 2341   2341 _R_telsendbufft:
+00000021                         +0 2342   2342 	dsb 1
+                                 +0 2343   2343 	symbol_a "R_telcomcounter",8,0,0
+                                 +0 2344   2344 	public _R_telcomcounter
+00000022                         +0 2345   2345 _R_telcomcounter:
+00000022                         +0 2346   2346 	dsb 1
+                                 +0 2347   2347 	symbol_a "R_telrecebuffadd",8,0,0
+                                 +0 2348   2348 	public _R_telrecebuffadd
+00000023                         +0 2349   2349 _R_telrecebuffadd:
+00000023                         +0 2350   2350 	dsb 1
+                                 +0 2351   2351 	symbol_a "R_telrecebufft",8,0,0
+                                 +0 2352   2352 	public _R_telrecebufft
+00000024                         +0 2353   2353 _R_telrecebufft:
+00000024                         +0 2354   2354 	dsb 1
+                                 +0 2355   2355 	symbol_a "R_ringcountertimer",8,0,0
+                                 +0 2356   2356 	public _R_ringcountertimer
+00000025                         +0 2357   2357 _R_ringcountertimer:
+00000025                         +0 2358   2358 	dsb 1
+                                 +0 2359   2359 	symbol_a "R_ringph",8,0,0
+                                 +0 2360   2360 	public _R_ringph
+00000026                         +0 2361   2361 _R_ringph:
+00000026                         +0 2362   2362 	dsb 1
+                                 +0 2363   2363 	symbol_a "R_clrcountertimer",8,0,0
+                                 +0 2364   2364 	public _R_clrcountertimer
+00000027                         +0 2365   2365 _R_clrcountertimer:
+00000027                         +0 2366   2366 	dsb 1
+                                 +0 2367   2367 	symbol_a "R_dethokdetimer",8,0,0
+                                 +0 2368   2368 	public _R_dethokdetimer
+00000028                         +0 2369   2369 _R_dethokdetimer:
+00000028                         +0 2370   2370 	dsb 1
+                                 +0 2371   2371 	symbol_a "R_telrececounter",8,0,0
+                                 +0 2372   2372 	public _R_telrececounter
+00000029                         +0 2373   2373 _R_telrececounter:
+00000029                         +0 2374   2374 	dsb 1
+                                 +0 2375   2375 	symbol_a "R_shortringtimer",8,0,0
+                                 +0 2376   2376 	public _R_shortringtimer
+0000002A                         +0 2377   2377 _R_shortringtimer:
+0000002A                         +0 2378   2378 	dsb 1
+                                 +0 2379   2379 	symbol_a "R_singlecounter",8,0,0
+                                 +0 2380   2380 	public _R_singlecounter
+0000002B                         +0 2381   2381 _R_singlecounter:
+0000002B                         +0 2382   2382 	dsb 1
+                                 +0 2383   2383 	symbol_a "R_midtimer",8,0,0
+                                 +0 2384   2384 	public _R_midtimer
+0000002C                         +0 2385   2385 _R_midtimer:
+0000002C                         +0 2386   2386 	dsb 1
+                                 +0 2387   2387 	symbol_a "R_pswcounter",8,0,0
+                                 +0 2388   2388 	public _R_pswcounter
+0000002D                         +0 2389   2389 _R_pswcounter:
+0000002D                         +0 2390   2390 	dsb 1
+                                 +0 2391   2391 	symbol_a "R_pointer",8,0,0
+                                 +0 2392   2392 	public _R_pointer
+0000002E                         +0 2393   2393 _R_pointer:
+0000002E                         +0 2394   2394 	dsb 1
+                                 +0 2395   2395 	symbol_a "R_intcounter",8,0,0
+                                 +0 2396   2396 	public _R_intcounter
+0000002F                         +0 2397   2397 _R_intcounter:
+0000002F                         +0 2398   2398 	dsb 1
+                                 +0 2399   2399 n_area section data medium align=1,1
+                                 +0 2400   2400 	symbol_a "R_counter",8,0,0
+                                 +0 2401   2401 	public _R_counter
+00000000                         +0 2402   2402 _R_counter:
+00000000                         +0 2403   2403 	dsb 1
+                                 +0 2404   2404 	extern small C87C_long0
+                                 +0 2405   2405 	end
+
+Assembly complete, No error
+TLCS-870/C Relocatable Assembler (32) V1.0b  [Page     2]  PR_telremoV1.lst
+
+Symbol table listing
+--------------------
+
+Symbol           Category         Value     Attribute
+
+INIT_RAM         C M     LAB      00000014  R           n_code
+INT_Vector       R       SEC      0000FFE0  A 20        
+L10              C M     LAB      00000108  R           n_code
+L11              C M     LAB      00000105  R           n_code
+L12              C M     LAB      00000126  R           n_code
+L14              C M     LAB      0000011D  R           n_code
+L17              C M     LAB      0000015D  R           n_code
+L18              C M     LAB      0000014D  R           n_code
+L19              C M     LAB      00000149  R           n_code
+L2               C M     LAB      00000027  R           n_code
+L20              C M     LAB      0000013E  R           n_code
+L25              C M     LAB      00000165  R           n_code
+L26              C M     LAB      000001B5  R           n_code
+L27              C M     LAB      000001C2  R           n_code
+L29              C M     LAB      000001F3  R           n_code
+L3               C M     LAB      000000AD  R           n_code
+L32              C M     LAB      000001E2  R           n_code
+L35              C M     LAB      00000211  R           n_code
+L36              C M     LAB      00000204  R           n_code
+L37              C M     LAB      0000021E  R           n_code
+L4               C M     LAB      000000BB  R           n_code
+L40              C M     LAB      0000024C  R           n_code
+L41              C M     LAB      000002D6  R           n_code
+L43              C M     LAB      00000254  R           n_code
+L45              C M     LAB      00000262  R           n_code
+L46              C M     LAB      00000279  R           n_code
+L47              C M     LAB      0000028A  R           n_code
+L49              C M     LAB      000002B3  R           n_code
+L50              C M     LAB      000002A9  R           n_code
+L50000           C M     LAB      000002DA  R           n_code
+L50001           C M     LAB      00000405  R           n_code
+L52              C M     LAB      000002CB  R           n_code
+L54              C M     LAB      0000033E  R           n_code
+L55              C M     LAB      00000312  R           n_code
+L56              C M     LAB      000002FC  R           n_code
+L59              C M     LAB      0000033B  R           n_code
+L60              C M     LAB      00000328  R           n_code
+L64              C M     LAB      00000407  R           n_code
+L65              C M     LAB      0000035E  R           n_code
+L67              C M     LAB      00000378  R           n_code
+L68              C M     LAB      0000036E  R           n_code
+L7               C M     LAB      000000D5  R           n_code
+L70              C M     LAB      00000385  R           n_code
+L73              C M     LAB      00000387  R           n_code
+L75              C M     LAB      0000039A  R           n_code
+L77              C M     LAB      000003B3  R           n_code
+L79              C M     LAB      000003C6  R           n_code
+L8               C M     LAB      000000E0  R           n_code
+L81              C M     LAB      000003FE  R           n_code
+L83              C M     LAB      00000428  R           n_code
+L84              C M     LAB      00000418  R           n_code
+L85              C M     LAB      0000041F  R           n_code
+L87              C M     LAB      0000042B  R           n_code
+L88              C M     LAB      00000440  R           n_code
+L89              C M     LAB      00000443  R           n_code
+L9               C M     LAB      000000F9  R           n_code
+L90              C M     LAB      00000486  R           n_code
+PR_telremoV1_c           MOD
+_ADCCR1          D       LAB      0000000E  A PUB       
+_ADCCR2          D       LAB      0000000F  A PUB       
+_ADCDR1          D       LAB      00000020  A PUB       
+_ADCDR2          D       LAB      00000021  A PUB       
+_Delayus         C M     LAB      000001F4  R PUB       n_code
+_Det_remo        C M     LAB      000000BC  R PUB       n_code
+_EINTCR          D       LAB      00000037  A PUB       
+_EIRH            D       LAB      0000003B  A PUB       
+_EIRL            D       LAB      0000003A  A PUB       
+_ERROCODE        D S     LAB      00000007  R PUB       t_area
+_FLAG0           D S     LAB      00000000  R PUB       t_area
+_FLAG1           D S     LAB      00000001  R PUB       t_area
+_FLAG2           D S     LAB      00000002  R PUB       t_area
+_FLAG3           D S     LAB      00000003  R PUB       t_area
+_FLAG4           D S     LAB      00000004  R PUB       t_area
+_FLAG5           D S     LAB      00000005  R PUB       t_area
+_FLAG6           D S     LAB      00000006  R PUB       t_area
+_FLAGI           D S     LAB      0000000A  R PUB       t_area
+_FLAGX           D S     LAB      00000008  R PUB       t_area
+_FLAGY           D S     LAB      00000009  R PUB       t_area
+_ILH             D       LAB      0000003D  A PUB       
+_ILL             D       LAB      0000003C  A PUB       
+_INTSEL          D       LAB      0000003E  A PUB       
+_INT_Dummy       C M     LAB      00000491  R PUB       n_code
+_INT_Dummyn      C M     LAB      00000492  R PUB       n_code
+_INT_INT0MP      C M     LAB      00000446  R PUB       n_code
+_INT_INT4MP      C M     LAB      00000460  R PUB       n_code
+_INT_INT5MP      C M     LAB      00000461  R PUB       n_code
+_INT_INTTBTMP    C M     LAB      00000409  R PUB       n_code
+_Mcu_Ini         C M     LAB      0000005A  R PUB       n_code
+_Onesecpr        C M     LAB      000000FA  R PUB       n_code
+_P0DR            D       LAB      00000000  A PUB       
+_P0OUTCR         D       LAB      0000000B  A PUB       
+_P0PRD           D       LAB      0000000C  A PUB       
+_P1CR            D       LAB      00000009  A PUB       
+_P1DR            D       LAB      00000001  A PUB       
+_P2DR            D       LAB      00000002  A PUB       
+_P2PRD           D       LAB      0000000D  A PUB       
+_P3CR            D       LAB      0000000A  A PUB       
+_P3DR            D       LAB      00000003  A PUB       
+_PWREG3          D       LAB      0000001E  A PUB       
+_PWREG4          D       LAB      0000001F  A PUB       
+_Port_Ini        C M     LAB      0000003E  R PUB       n_code
+_RDBUF           D       LAB      00000027  A PUB       
+_R_40mscounter   D S     LAB      00000017  R PUB       t_area
+_R_clrcountertimer
+                 D S     LAB      00000027  R PUB       t_area
+_R_counter       D M     LAB      00000000  R PUB       n_area
+_R_dethokdetimer
+                 D S     LAB      00000028  R PUB       t_area
+_R_dethoktimer   D S     LAB      00000019  R PUB       t_area
+_R_intcounter    D S     LAB      0000002F  R PUB       t_area
+_R_longringtimer
+                 D S     LAB      00000016  R PUB       t_area
+_R_midtimer      D S     LAB      0000002C  R PUB       t_area
+_R_onesecondcounter
+                 D S     LAB      00000018  R PUB       t_area
+_R_p3ioback      D S     LAB      0000001A  R PUB       t_area
+_R_pointer       D S     LAB      0000002E  R PUB       t_area
+_R_pswcounter    D S     LAB      0000002D  R PUB       t_area
+_R_ringcounter   D S     LAB      0000000B  R PUB       t_area
+_R_ringcountertimer
+                 D S     LAB      00000025  R PUB       t_area
+_R_ringph        D S     LAB      00000026  R PUB       t_area
+_R_shortringtimer
+                 D S     LAB      0000002A  R PUB       t_area
+_R_singlecounter
+                 D S     LAB      0000002B  R PUB       t_area
+_R_tc1crback     D S     LAB      0000001F  R PUB       t_area
+_R_telcomcounter
+                 D S     LAB      00000022  R PUB       t_area
+_R_telrecebuff   D S     LAB      0000000C  R PUB       t_area
+_R_telrecebuffadd
+                 D S     LAB      00000023  R PUB       t_area
+_R_telrecebufft  D S     LAB      00000024  R PUB       t_area
+_R_telrececounter
+                 D S     LAB      00000029  R PUB       t_area
+_R_telremobuff   D S     LAB      0000000E  R PUB       t_area
+_R_telsendbuffa  D S     LAB      0000001B  R PUB       t_area
+_R_telsendbuffb  D S     LAB      0000001D  R PUB       t_area
+_R_telsendbufft  D S     LAB      00000021  R PUB       t_area
+_R_telsendtimer  D S     LAB      00000020  R PUB       t_area
+_Recesub         C M     LAB      0000033F  R PUB       n_code
+_Reg_Ini         C M     LAB      0000007A  R PUB       n_code
+_Ringcounter     C M     LAB      0000009D  R PUB       n_code
+_Ringpr          C M     LAB      00000109  R PUB       n_code
+_SECR            D       LAB      0000002A  A PUB       
+_SEDR            D       LAB      00000029  A PUB       
+_SESR            D       LAB      00000028  A PUB       
+_STOPCR          D       LAB      00000031  A PUB       
+_SYSCR1          D       LAB      00000038  A PUB       
+_SYSCR2          D       LAB      00000039  A PUB       
+_TBL_INT         R       LAB      0000FFE0  A PUB       
+_TBTCR           D       LAB      00000036  A PUB       
+_TC1CR           D       LAB      00000014  A PUB       
+_TC1DRA          D       LAB      00000010  A PUB       
+_TC1DRB          D       LAB      00000012  A PUB       
+_TC3CR           D       LAB      0000001A  A PUB       
+_TC4CR           D       LAB      0000001B  A PUB       
+_TTREG3          D       LAB      0000001C  A PUB       
+_TTREG4          D       LAB      0000001D  A PUB       
+_Telrecepr       C M     LAB      000002DD  R PUB       n_code
+_Telsendpr       C M     LAB      000001C3  R PUB       n_code
+_Telsendsub      C M     LAB      00000214  R PUB       n_code
+_UARTCR1         D       LAB      00000025  A PUB       
+_UARTCR2         D       LAB      00000026  A PUB       
+_WDTCR1          D       LAB      00000034  A PUB       
+_WDTCR2          D       LAB      00000035  A PUB       
+_pre_telsenddate
+                 C M     LAB      0000015E  R PUB       n_code
+_startup         C M     LAB      00000000  R PUB       n_code
+io_ADCCR1        D       SEC      0000000E  A 1         
+io_ADCCR2        D       SEC      0000000F  A 1         
+io_ADCDR1        D       SEC      00000020  A 1         
+io_ADCDR2        D       SEC      00000021  A 1         
+io_EINTCR        D       SEC      00000037  A 1         
+io_EIRH          D       SEC      0000003B  A 1         
+io_EIRL          D       SEC      0000003A  A 1         
+io_ILH           D       SEC      0000003D  A 1         
+io_ILL           D       SEC      0000003C  A 1         
+io_INTSEL        D       SEC      0000003E  A 1         
+io_P0DR          D       SEC      00000000  A 1         
+io_P0OUTCR       D       SEC      0000000B  A 1         
+io_P0PRD         D       SEC      0000000C  A 1         
+io_P1CR          D       SEC      00000009  A 1         
+io_P1DR          D       SEC      00000001  A 1         
+io_P2DR          D       SEC      00000002  A 1         
+io_P2PRD         D       SEC      0000000D  A 1         
+io_P3CR          D       SEC      0000000A  A 1         
+io_P3DR          D       SEC      00000003  A 1         
+io_PWREG3        D       SEC      0000001E  A 1         
+io_PWREG4        D       SEC      0000001F  A 1         
+io_RDBUF         D       SEC      00000027  A 1         
+io_SECR          D       SEC      0000002A  A 1         
+io_SEDR          D       SEC      00000029  A 1         
+io_SESR          D       SEC      00000028  A 1         
+io_STOPCR        D       SEC      00000031  A 1         
+io_SYSCR1        D       SEC      00000038  A 1         
+io_SYSCR2        D       SEC      00000039  A 1         
+io_TBTCR         D       SEC      00000036  A 1         
+io_TC1CR         D       SEC      00000014  A 1         
+io_TC1DRA        D       SEC      00000010  A 2         
+io_TC1DRB        D       SEC      00000012  A 2         
+io_TC3CR         D       SEC      0000001A  A 1         
+io_TC4CR         D       SEC      0000001B  A 1         
+io_TTREG3        D       SEC      0000001C  A 1         
+io_TTREG4        D       SEC      0000001D  A 1         
+io_UARTCR1       D       SEC      00000025  A 1         
+io_UARTCR2       D       SEC      00000026  A 1         
+io_WDTCR1        D       SEC      00000034  A 1         
+io_WDTCR2        D       SEC      00000035  A 1         
+n_area           D M     SEC      00000000  R 1         
+n_code           C M     SEC      00000000  R 493       
+t_area           D S     SEC      00000000  R 30        
+
+
+TOTAL
+  201 user defined symbol(s)
+    1 unreferenced external symbol(s)

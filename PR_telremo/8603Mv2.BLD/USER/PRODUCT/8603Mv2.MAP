@@ -1,0 +1,325 @@
+
+Sat May 10 09:49:40 2008
+
+Toshiba Unified Linkage Editor (32) V2.0i     [Page     1]     E:\PR_telremo\8603Mv2.BLD\USE
+Runtime option : tulink E:\PR_telremo\8603Mv2.BLD\SYSTEM\PROJ\8603Mv2.LCF -T870C -ga -la E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel C86.LIB -lf E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\8603Mv2.MAP -o E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\8603Mv2.abs -$ 
+
+  Command file : E:\PR_telremo\8603Mv2.BLD\SYSTEM\PROJ\8603Mv2.LCF
+    /*************** memory part *************************/
+    memory
+    {
+    		SFR				: org=0x0000 , len=0x0040
+    		data.s			: org=0x0040 , len=0x00c0
+    		data.m			: org=0x0100 , len=0x0140
+    		code.m			: org=0xe000 , len=0x1fc0
+    		CALLV_VECTOR	: org=0xffc0 , len=0x0020
+    		INT_VECTOR		: org=0xffe0 , len=0x0020
+    }
+    /************** sections part ************************/
+    sections
+    {
+    		tiny_area		org=0x0040 : {*(t_area)}
+    		near_area		org=0x0100 : {*(n_area)}
+    		near_data		org=0xe000
+    						addr=org(near_area)+sizeof(near_area)
+    						: {*(n_data)}
+    		tiny_data		org=org(near_data)+sizeof(near_data)
+    						addr=org(tiny_area)+sizeof(tiny_area)
+    						: {*(t_data)}
+    		v_const			: {*(v_const)} > CALLV_VECTOR
+    		__TinyData = addr(tiny_data);
+    		__NearData = addr(near_data);
+    }
+
+  Input files (modules)
+    E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel (PR_telremoV1_c)
+
+  Link map
+    Memory     Out-sec    Attri   Base       Length     In-sec(In-file)        Information
+    ---------- ---------- ------- ---------- ---------- ---------------------- ---------------
+    SFR        io_P0DR    DATA             0          1 io_P0DR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P1DR    DATA             1          1 io_P1DR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P2DR    DATA             2          1 io_P2DR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P3DR    DATA             3          1 io_P3DR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR                                    4          5                        *** Gap ***
+    SFR        io_P1CR    DATA             9          1 io_P1CR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P3CR    DATA             A          1 io_P3CR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P0OUTCR DATA             B          1 io_P0OUTCR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P0PRD   DATA             C          1 io_P0PRD(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_P2PRD   DATA             D          1 io_P2PRD(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_ADCCR1  DATA             E          1 io_ADCCR1(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_ADCCR2  DATA             F          1 io_ADCCR2(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TC1DRA  DATA            10          2 io_TC1DRA(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TC1DRB  DATA            12          2 io_TC1DRB(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TC1CR   DATA            14          1 io_TC1CR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR                                   15          5                        *** Gap ***
+    SFR        io_TC3CR   DATA            1A          1 io_TC3CR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TC4CR   DATA            1B          1 io_TC4CR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TTREG3  DATA            1C          1 io_TTREG3(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TTREG4  DATA            1D          1 io_TTREG4(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_PWREG3  DATA            1E          1 io_PWREG3(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_PWREG4  DATA            1F          1 io_PWREG4(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_ADCDR1  DATA            20          1 io_ADCDR1(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_ADCDR2  DATA            21          1 io_ADCDR2(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR                                   22          3                        *** Gap ***
+    SFR        io_UARTCR1 DATA            25          1 io_UARTCR1(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_UARTCR2 DATA            26          1 io_UARTCR2(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_RDBUF   DATA            27          1 io_RDBUF(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_SESR    DATA            28          1 io_SESR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_SEDR    DATA            29          1 io_SEDR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_SECR    DATA            2A          1 io_SECR (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR                                   2B          6                        *** Gap ***
+    SFR        io_STOPCR  DATA            31          1 io_STOPCR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR                                   32          2                        *** Gap ***
+    SFR        io_WDTCR1  DATA            34          1 io_WDTCR1(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_WDTCR2  DATA            35          1 io_WDTCR2(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_TBTCR   DATA            36          1 io_TBTCR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_EINTCR  DATA            37          1 io_EINTCR(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_SYSCR1  DATA            38          1 io_SYSCR1(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_SYSCR2  DATA            39          1 io_SYSCR2(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_EIRL    DATA            3A          1 io_EIRL (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_EIRH    DATA            3B          1 io_EIRH (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_ILL     DATA            3C          1 io_ILL  (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_ILH     DATA            3D          1 io_ILH  (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR        io_INTSEL  DATA            3E          1 io_INTSEL(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+    SFR                                   3F          1                        *** Gap ***
+    data.s     tiny_area  DATA            40         30 t_area  (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL
+    data.s                                70         90                        *** Gap ***
+    data.m     near_area  DATA           100          1 n_area  (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL
+    data.m                               101        13F                        *** Gap ***
+    code.m     n_code     CODE          E000        493 n_code  (E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL
+    code.m                              E493       1B2D                        *** Gap ***
+    CALLV_VECTOR
+                                        FFC0         20                        *** Gap ***
+    INT_VECTOR INT_Vector ROMDATA       FFE0         20 INT_Vector(E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\PR_telremoV1.rel)
+                                                                               NORMAL:A
+
+  Symbol table for E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\8603Mv2.abs
+      Symbol       Address  In-sec   Cross-reference
+      ------------ -------- -------- --------------------------------------
+    Input module : PR_telremoV1_c
+      _ADCCR1             E io_ADCCR1 
+      _ADCCR2             F io_ADCCR2 
+      _ADCDR1            20 io_ADCDR1 
+      _ADCDR2            21 io_ADCDR2 
+      _Delayus         E1F4 n_code   
+      _Det_remo        E0BC n_code   
+      _EINTCR            37 io_EINTCR 
+      _EIRH              3B io_EIRH  
+      _EIRL              3A io_EIRL  
+      _ERROCODE          47 t_area   
+      _FLAG0             40 t_area   
+      _FLAG1             41 t_area   
+      _FLAG2             42 t_area   
+      _FLAG3             43 t_area   
+      _FLAG4             44 t_area   
+      _FLAG5             45 t_area   
+      _FLAG6             46 t_area   
+      _FLAGI             4A t_area   
+      _FLAGX             48 t_area   
+      _FLAGY             49 t_area   
+      _ILH               3D io_ILH   
+      _ILL               3C io_ILL   
+      _INTSEL            3E io_INTSEL 
+      _INT_Dummy       E491 n_code   
+      _INT_Dummyn      E492 n_code   
+      _INT_INT0MP      E446 n_code   
+      _INT_INT4MP      E460 n_code   
+      _INT_INT5MP      E461 n_code   
+      _INT_INTTBTMP
+                       E409 n_code   
+      _Mcu_Ini         E05A n_code   
+      _Onesecpr        E0FA n_code   
+      _P0DR               0 io_P0DR  
+      _P0OUTCR            B io_P0OUTCR 
+      _P0PRD              C io_P0PRD 
+      _P1CR               9 io_P1CR  
+      _P1DR               1 io_P1DR  
+      _P2DR               2 io_P2DR  
+      _P2PRD              D io_P2PRD 
+      _P3CR               A io_P3CR  
+      _P3DR               3 io_P3DR  
+      _PWREG3            1E io_PWREG3 
+      _PWREG4            1F io_PWREG4 
+      _Port_Ini        E03E n_code   
+      _RDBUF             27 io_RDBUF 
+      _R_40mscounter
+                         57 t_area   
+      _R_clrcountertimer
+                         67 t_area   
+      _R_counter        100 n_area   
+      _R_dethokdetimer
+                         68 t_area   
+      _R_dethoktimer
+                         59 t_area   
+      _R_intcounter
+                         6F t_area   
+      _R_longringtimer
+                         56 t_area   
+      _R_midtimer        6C t_area   
+      _R_onesecondcounter
+                         58 t_area   
+      _R_p3ioback        5A t_area   
+      _R_pointer         6E t_area   
+      _R_pswcounter
+                         6D t_area   
+      _R_ringcounter
+                         4B t_area   
+      _R_ringcountertimer
+                         65 t_area   
+      _R_ringph          66 t_area   
+      _R_shortringtimer
+                         6A t_area   
+      _R_singlecounter
+                         6B t_area   
+      _R_tc1crback       5F t_area   
+      _R_telcomcounter
+                         62 t_area   
+      _R_telrecebuff
+                         4C t_area   
+      _R_telrecebuffadd
+                         63 t_area   
+      _R_telrecebufft
+                         64 t_area   
+      _R_telrececounter
+                         69 t_area   
+      _R_telremobuff
+                         4E t_area   
+      _R_telsendbuffa
+                         5B t_area   
+      _R_telsendbuffb
+                         5D t_area   
+      _R_telsendbufft
+                         61 t_area   
+      _R_telsendtimer
+                         60 t_area   
+      _Recesub         E33F n_code   
+      _Reg_Ini         E07A n_code   
+      _Ringcounter     E09D n_code   
+      _Ringpr          E109 n_code   
+      _SECR              2A io_SECR  
+      _SEDR              29 io_SEDR  
+      _SESR              28 io_SESR  
+      _STOPCR            31 io_STOPCR 
+      _SYSCR1            38 io_SYSCR1 
+      _SYSCR2            39 io_SYSCR2 
+      _TBL_INT         FFE0 INT_Vector 
+      _TBTCR             36 io_TBTCR 
+      _TC1CR             14 io_TC1CR 
+      _TC1DRA            10 io_TC1DRA 
+      _TC1DRB            12 io_TC1DRB 
+      _TC3CR             1A io_TC3CR 
+      _TC4CR             1B io_TC4CR 
+      _TTREG3            1C io_TTREG3 
+      _TTREG4            1D io_TTREG4 
+      _Telrecepr       E2DD n_code   
+      _Telsendpr       E1C3 n_code   
+      _Telsendsub      E214 n_code   
+      _UARTCR1           25 io_UARTCR1 
+      _UARTCR2           26 io_UARTCR2 
+      _WDTCR1            34 io_WDTCR1 
+      _WDTCR2            35 io_WDTCR2 
+      _pre_telsenddate
+                       E15E n_code   
+      _startup         E000 n_code   
+      INIT_RAM         E014 n_code   
+      L10              E108 n_code   
+      L11              E105 n_code   
+      L12              E126 n_code   
+      L14              E11D n_code   
+      L17              E15D n_code   
+      L18              E14D n_code   
+      L19              E149 n_code   
+      L2               E027 n_code   
+      L20              E13E n_code   
+      L25              E165 n_code   
+      L26              E1B5 n_code   
+      L27              E1C2 n_code   
+      L29              E1F3 n_code   
+      L3               E0AD n_code   
+      L32              E1E2 n_code   
+      L35              E211 n_code   
+      L36              E204 n_code   
+      L37              E21E n_code   
+      L4               E0BB n_code   
+      L40              E24C n_code   
+      L41              E2D6 n_code   
+      L43              E254 n_code   
+      L45              E262 n_code   
+      L46              E279 n_code   
+      L47              E28A n_code   
+      L49              E2B3 n_code   
+      L50              E2A9 n_code   
+      L50000           E2DA n_code   
+      L50001           E405 n_code   
+      L52              E2CB n_code   
+      L54              E33E n_code   
+      L55              E312 n_code   
+      L56              E2FC n_code   
+      L59              E33B n_code   
+      L60              E328 n_code   
+      L64              E407 n_code   
+      L65              E35E n_code   
+      L67              E378 n_code   
+      L68              E36E n_code   
+      L7               E0D5 n_code   
+      L70              E385 n_code   
+      L73              E387 n_code   
+      L75              E39A n_code   
+      L77              E3B3 n_code   
+      L79              E3C6 n_code   
+      L8               E0E0 n_code   
+      L81              E3FE n_code   
+      L83              E428 n_code   
+      L84              E418 n_code   
+      L85              E41F n_code   
+      L87              E42B n_code   
+      L88              E440 n_code   
+      L89              E443 n_code   
+      L9               E0F9 n_code   
+      L90              E486 n_code   
+
+Linkage editor end,No error

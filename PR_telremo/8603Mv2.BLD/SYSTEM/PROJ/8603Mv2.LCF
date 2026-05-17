@@ -1,0 +1,25 @@
+/*************** memory part *************************/
+memory
+{
+		SFR				: org=0x0000 , len=0x0040
+		data.s			: org=0x0040 , len=0x00c0
+		data.m			: org=0x0100 , len=0x0140
+		code.m			: org=0xe000 , len=0x1fc0
+		CALLV_VECTOR	: org=0xffc0 , len=0x0020
+		INT_VECTOR		: org=0xffe0 , len=0x0020
+}
+/************** sections part ************************/
+sections
+{
+		tiny_area		org=0x0040 : {*(t_area)}
+		near_area		org=0x0100 : {*(n_area)}
+		near_data		org=0xe000
+						addr=org(near_area)+sizeof(near_area)
+						: {*(n_data)}
+		tiny_data		org=org(near_data)+sizeof(near_data)
+						addr=org(tiny_area)+sizeof(tiny_area)
+						: {*(t_data)}
+		v_const			: {*(v_const)} > CALLV_VECTOR
+		__TinyData = addr(tiny_data);
+		__NearData = addr(near_data);
+}

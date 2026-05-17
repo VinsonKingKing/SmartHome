@@ -1,0 +1,10 @@
+CPU Name         : TLCS-870C
+Input  file name : E:\PR_telremo\8603Mv2.BLD\USER\PRODUCT\8603Mv2.abs
+Output file name : 8603Mv2.h16    *** Intel HEX format ***
+
+Section Name/Padding              Address   Address   Size
+                                  (Orignal) (Offset)
+--------------------------------------------------------------
+n_code                                E000  --------       493
+INT_Vector                            FFE0  --------        20
+
